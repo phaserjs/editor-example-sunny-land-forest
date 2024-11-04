@@ -31,7 +31,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_e9eb4bc9-12fa-4314-8f06-d12fdaefe51f", {
+		this.cache.tilemap.add("levelMap_1f62d08e-94ce-4ba4-8d7d-0b18138f2286", {
 			format: 1,
 			data: {
 				width: 24,
@@ -87,7 +87,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_e9eb4bc9-12fa-4314-8f06-d12fdaefe51f");
+		const levelMap = this.add.tilemap("levelMap_1f62d08e-94ce-4ba4-8d7d-0b18138f2286");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -331,7 +331,7 @@ export default class Level extends Phaser.Scene {
 		carrotsLayer.add(carrot_3);
 
 		// player
-		const player = new Player(this, 609, 162);
+		const player = new Player(this, 86, 180);
 		this.add.existing(player);
 
 		// props
@@ -386,14 +386,19 @@ export default class Level extends Phaser.Scene {
 		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 0, 0);
 		collisionsLayer.visible = false;
 
+		// hudLayer
+		const hudLayer = this.add.container(0, 0);
+
 		// hud
-		const hud = this.add.container(0, 0);
+		const hud = this.add.image(10, 11, "atlas", "hud/hud-4");
+		hud.setOrigin(0, 0);
+		hudLayer.add(hud);
 
 		// scoreLabel
-		const scoreLabel = this.add.text(57, 11, "", {});
+		const scoreLabel = this.add.text(57, 12, "", {});
 		scoreLabel.text = "0";
-		scoreLabel.setStyle({ "fontFamily": "VT323", "fontSize": "8px" });
-		hud.add(scoreLabel);
+		scoreLabel.setStyle({ "align": "center", "fontFamily": "VT323", "fontSize": "8px" });
+		hudLayer.add(scoreLabel);
 
 		// playerVsCollision
 		this.physics.add.collider(player, collisionsLayer, this.playerVsCollision, this.playerVsCollisionProcess, this);
@@ -451,13 +456,14 @@ export default class Level extends Phaser.Scene {
 		// bee_4 (prefab fields)
 		bee_4.distance = 30;
 
-		// hud (components)
-		new FixedToCameraComp(hud);
+		// hudLayer (components)
+		new FixedToCameraComp(hudLayer);
 
 		this.mainLayer = mainLayer;
 		this.lootLayer = lootLayer;
 		this.player = player;
 		this.collisionsLayer = collisionsLayer;
+		this.hud = hud;
 		this.scoreLabel = scoreLabel;
 		this.levelMap = levelMap;
 		this.jumpKey = jumpKey;
@@ -477,6 +483,8 @@ export default class Level extends Phaser.Scene {
 	player;
 	/** @type {Phaser.Tilemaps.TilemapLayer} */
 	collisionsLayer;
+	/** @type {Phaser.GameObjects.Image} */
+	hud;
 	/** @type {Phaser.GameObjects.Text} */
 	scoreLabel;
 	/** @type {Phaser.Tilemaps.Tilemap} */
@@ -543,6 +551,7 @@ export default class Level extends Phaser.Scene {
 		switch (tile.index) {
 			case 5:
 				// kill zone
+				this.sound.play("hurt");
 				player.death();
 				break;
 			case 8:
@@ -577,12 +586,12 @@ export default class Level extends Phaser.Scene {
 
 		if (loot.collectable) {
 
-            loot.destroy();
+			loot.destroy();
 
 			this.increaseScore();
 
-            this.sound.play("star");
-        }
+			this.sound.play("star");
+		}
 	}
 
 	/**
@@ -826,14 +835,21 @@ export default class Level extends Phaser.Scene {
 	update() {
 
 		this.movePlayer();
+
 		this.deathReset();
+
+		this.updateHealthHud();
+	}
+
+	updateHealthHud() {
+
+		this.hud.setFrame("hud/hud-" + (this.player.health + 1));
 	}
 
 	deathReset() {
 
 		if (this.player.y > this.mainLayer.layer.heightInPixels) {
-			// player.reset();
-			// this.music.stop();
+
 			this.scene.start("GameOver");
 		}
 	}

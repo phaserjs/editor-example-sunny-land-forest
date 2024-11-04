@@ -653,8 +653,8 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "x": 609,
-            "y": 162
+            "x": 86,
+            "y": 180
         },
         {
             "type": "Layer",
@@ -791,19 +791,34 @@
         {
             "type": "Container",
             "id": "587a0ed6-c29d-4c48-81c1-1735f751834b",
-            "label": "hud",
+            "label": "hudLayer",
             "components": [
                 "FixedToCameraComp"
             ],
             "list": [
+                {
+                    "type": "Image",
+                    "id": "0ae26adc-6b68-48a2-8e70-e51f96b059d4",
+                    "label": "hud",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "atlas",
+                        "frame": "hud/hud-4"
+                    },
+                    "x": 10,
+                    "y": 11,
+                    "originX": 0,
+                    "originY": 0
+                },
                 {
                     "type": "Text",
                     "id": "e56ae4af-cc30-4f92-b0ff-e27909ea2959",
                     "label": "scoreLabel",
                     "scope": "CLASS",
                     "x": 57,
-                    "y": 11,
+                    "y": 12,
                     "text": "0",
+                    "align": "center",
                     "fontFamily": "VT323",
                     "fontSize": "8px"
                 }
