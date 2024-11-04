@@ -31,7 +31,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_1f62d08e-94ce-4ba4-8d7d-0b18138f2286", {
+		this.cache.tilemap.add("levelMap_5e1b841c-ec7c-46af-91a2-8df7a61cc3cc", {
 			format: 1,
 			data: {
 				width: 24,
@@ -87,7 +87,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_1f62d08e-94ce-4ba4-8d7d-0b18138f2286");
+		const levelMap = this.add.tilemap("levelMap_5e1b841c-ec7c-46af-91a2-8df7a61cc3cc");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -331,7 +331,7 @@ export default class Level extends Phaser.Scene {
 		carrotsLayer.add(carrot_3);
 
 		// player
-		const player = new Player(this, 86, 180);
+		const player = new Player(this, 1088, 352);
 		this.add.existing(player);
 
 		// props
@@ -384,7 +384,6 @@ export default class Level extends Phaser.Scene {
 
 		// collisionsLayer
 		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 0, 0);
-		collisionsLayer.visible = false;
 
 		// hudLayer
 		const hudLayer = this.add.container(0, 0);
@@ -416,19 +415,19 @@ export default class Level extends Phaser.Scene {
 		this.physics.add.overlap(player, collisionsLayer, this.playerVsLadder, (p, t) => t.index === 4, this);
 
 		// playerVsEnemies
-		this.physics.add.overlap(player, enemiesLayer.list, this.playerVsEnemies, undefined, this);
+		this.physics.add.overlap(player, enemiesLayer.list, this.playerVsEnemies, this.playerIsAlive, this);
 
-		// collider
-		this.physics.add.overlap(player, carrotsLayer.list, this.playerVsCarrots, undefined, this);
+		// playerVsCarrots
+		this.physics.add.overlap(player, carrotsLayer.list, this.playerVsCarrots, this.playerIsAlive, this);
 
 		// playerVsStar
-		this.physics.add.overlap(player, starsLayer.list, this.playerVsStar, undefined, this);
+		this.physics.add.overlap(player, starsLayer.list, this.playerVsStar, this.playerIsAlive, this);
 
 		// playerVsChest
-		this.physics.add.overlap(player, chestLayer.list, this.playerVsChest, undefined, this);
+		this.physics.add.overlap(player, chestLayer.list, this.playerVsChest, this.playerIsAlive, this);
 
 		// playerVsLoot
-		this.physics.add.overlap(player, lootLayer.list, this.playerVsLoot, undefined, this);
+		this.physics.add.overlap(player, lootLayer.list, this.playerVsLoot, this.playerIsAlive, this);
 
 		// background (components)
 		new FixedToCameraComp(background);
@@ -519,13 +518,18 @@ export default class Level extends Phaser.Scene {
 
 			if (tile.index === 2) {
 
-				tile.setCollision(false, false, true, false)
+				tile.setCollision(false, false, true, false);
 			}
 		});
 
 		// camera
 		this.cameras.main.setBounds(0, 0, this.mainLayer.layer.widthInPixels, this.mainLayer.layer.heightInPixels);
 		this.cameras.main.startFollow(this.player, true);
+	}
+
+	playerIsAlive() {
+
+		return this.player.alive;
 	}
 
 	/**
@@ -556,7 +560,6 @@ export default class Level extends Phaser.Scene {
 				break;
 			case 8:
 				// exit zone
-				// this.music.stop();
 				this.scene.start("GameOver");
 				break;
 		}

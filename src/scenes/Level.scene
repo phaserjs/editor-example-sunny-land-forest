@@ -653,8 +653,8 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "x": 86,
-            "y": 180
+            "x": 1088,
+            "y": 352
         },
         {
             "type": "Layer",
@@ -785,7 +785,6 @@
             "id": "acb0f7e7-fdac-4ac2-82e8-81ef4fd5899d",
             "label": "collisionsLayer",
             "scope": "CLASS",
-            "visible": false,
             "tilemapId": "adbad958-e0fa-4083-a2bc-454b442abaf7"
         },
         {
@@ -958,17 +957,19 @@
             "object2": "enemiesLayer.list",
             "overlapOnly": true,
             "collideCallback": "this.playerVsEnemies",
+            "processCallback": "this.playerIsAlive",
             "callbackContext": "this"
         },
         {
             "id": "8176556e-04bc-4d5c-bc14-9b3950e0ded3",
             "type": "Collider",
-            "label": "collider",
+            "label": "playerVsCarrots",
             "scope": "LOCAL",
             "object1": "player",
             "object2": "carrotsLayer.list",
             "overlapOnly": true,
             "collideCallback": "this.playerVsCarrots",
+            "processCallback": "this.playerIsAlive",
             "callbackContext": "this"
         },
         {
@@ -980,6 +981,7 @@
             "object2": "starsLayer.list",
             "overlapOnly": true,
             "collideCallback": "this.playerVsStar",
+            "processCallback": "this.playerIsAlive",
             "callbackContext": "this"
         },
         {
@@ -991,6 +993,7 @@
             "object2": "chestLayer.list",
             "overlapOnly": true,
             "collideCallback": "this.playerVsChest",
+            "processCallback": "this.playerIsAlive",
             "callbackContext": "this"
         },
         {
@@ -1002,6 +1005,7 @@
             "object2": "lootLayer.list",
             "overlapOnly": true,
             "collideCallback": "this.playerVsLoot",
+            "processCallback": "this.playerIsAlive",
             "callbackContext": "this"
         }
     ],
