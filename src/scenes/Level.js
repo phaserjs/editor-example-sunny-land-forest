@@ -32,7 +32,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_87806a19-3ee6-46a7-b190-1480c620e63a", {
+		this.cache.tilemap.add("levelMap_c3c9ab75-e6a7-4d9e-97f3-d8429366a608", {
 			format: 1,
 			data: {
 				width: 24,
@@ -88,7 +88,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_87806a19-3ee6-46a7-b190-1480c620e63a");
+		const levelMap = this.add.tilemap("levelMap_c3c9ab75-e6a7-4d9e-97f3-d8429366a608");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -332,7 +332,7 @@ export default class Level extends Phaser.Scene {
 		carrotsLayer.add(carrot_3);
 
 		// player
-		const player = new Player(this, 1088, 352);
+		const player = new Player(this, 64, 160);
 		this.add.existing(player);
 
 		// props
@@ -442,7 +442,7 @@ export default class Level extends Phaser.Scene {
 		hudLayer.add(scoreLabel);
 
 		// playerVsFloor
-		this.physics.add.collider(player, collisionsLayer, this.playerVsFloow, this.playerIsAlive, this);
+		this.physics.add.collider(player, collisionsLayer, this.playerVsFloor, (p, t) => p.alive && t.index !== 4, this);
 
 		// enemiesVsCollision
 		this.physics.add.collider(enemiesLayer.list, collisionsLayer);
@@ -598,14 +598,20 @@ export default class Level extends Phaser.Scene {
 	playerVsFloor(player, tile) {
 
 		switch (tile.index) {
+
 			case 5:
+
 				// kill zone
 				this.sound.play("hurt");
 				player.death();
+
 				break;
+
 			case 8:
+
 				// exit zone
 				this.scene.start("GameOver");
+
 				break;
 		}
 	}
@@ -638,7 +644,6 @@ export default class Level extends Phaser.Scene {
 
 			player.body.velocity.y = -100;
 
-			console.log("open chest");
 			chest.open();
 		}
 	}
@@ -673,14 +678,7 @@ export default class Level extends Phaser.Scene {
 
 		carrot.destroy();
 
-		player.health++;
-
-		if (player.health > 3) {
-
-			player.health = 3;
-		}
-
-		this.sound.play("carrot");
+		player.increaseHealth();
 	}
 
 	/**
@@ -694,54 +692,14 @@ export default class Level extends Phaser.Scene {
 
 			enemy.destroy();
 
-			this.spawnEnemyDeath(enemy.x, enemy.y);
+			this.add.existing(new EnemyDeath(this, enemy.x, enemy.y));
 
-			player.body.velocity.y = -300;
-
-			this.sound.play("enemy-death");
+			player.smashEnemy();
 
 		} else {
 
-			this.hurtPlayer();
+			this.player.hurt();
 		}
-	}
-
-	hurtPlayer() {
-
-		if (this.player.hurtFlag) {
-
-			return;
-		}
-
-		this.player.hurtFlag = true;
-
-		this.player.play("player-hurt");
-		this.player.y -= 5;
-
-		this.player.body.velocity.y = -150;
-		this.player.body.velocity.x = this.player.flipX ? -22 : 22;
-		this.player.health--;
-
-		this.sound.play("hurt");
-
-		if (this.player.health < 1) {
-
-			this.player.death();
-
-		} else {
-
-			this.time.delayedCall(1000, () => {
-
-				this.player.hurtFlag = false;
-			});
-		}
-	}
-
-	spawnEnemyDeath(x, y) {
-
-		const temp = new EnemyDeath(this, x, y);
-
-		this.add.existing(temp);
 	}
 
 	movePlayer() {
@@ -753,7 +711,7 @@ export default class Level extends Phaser.Scene {
 			return;
 		}
 
-		if (this.hurtFlag) {
+		if (this.player.hurtFlag) {
 
 			this.player.play("player-hurt", true);
 

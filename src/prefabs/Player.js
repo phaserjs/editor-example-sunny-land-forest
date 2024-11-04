@@ -53,6 +53,56 @@ export default class Player extends Phaser.GameObjects.Sprite {
 		this.health = 0;
 	}
 
+	increaseHealth() {
+
+		this.health++;
+
+		if (this.health > 3) {
+
+			this.health = 3;
+		}
+
+		this.scene.sound.play("carrot");
+	}
+
+	smashEnemy() {
+
+		this.body.velocity.y = -300;
+
+		this.scene.sound.play("enemy-death");
+	}
+
+	hurt() {
+
+		if (this.hurtFlag) {
+
+			return;
+		}
+
+		this.hurtFlag = true;
+
+		this.play("player-hurt");
+		this.y -= 5;
+
+		this.body.velocity.y = -150;
+		this.body.velocity.x = this.flipX ? -22 : 22;
+		this.health--;
+
+		this.scene.sound.play("hurt");
+
+		if (this.health < 1) {
+
+			this.death();
+
+		} else {
+
+			this.scene.time.delayedCall(300, () => {
+
+				this.hurtFlag = false;
+			});
+		}
+	}
+
 	/* END-USER-CODE */
 }
 

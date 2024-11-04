@@ -654,8 +654,8 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "x": 1088,
-            "y": 352
+            "x": 64,
+            "y": 160
         },
         {
             "type": "Layer",
@@ -988,8 +988,8 @@
             "scope": "LOCAL",
             "object1": "player",
             "object2": "collisionsLayer",
-            "collideCallback": "this.playerVsFloow",
-            "processCallback": "this.playerIsAlive",
+            "collideCallback": "this.playerVsFloor",
+            "processCallback": "(p, t) => p.alive && t.index !== 4",
             "callbackContext": "this"
         },
         {
