@@ -7,10 +7,10 @@ import PressEnter from "../prefabs/PressEnter.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-export default class GameOver extends Phaser.Scene {
+export default class Home extends Phaser.Scene {
 
 	constructor() {
-		super("GameOver");
+		super("Home");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -28,12 +28,15 @@ export default class GameOver extends Phaser.Scene {
 		const middleground = this.add.tileSprite(0, 0, 384, 240, "middleground");
 		middleground.setOrigin(0, 0);
 
-		// game_over
-		this.add.image(160, 120, "game-over");
-
 		// press_enter_text
-		const press_enter_text = new PressEnter(this, 160, 199);
+		const press_enter_text = new PressEnter(this, 160, 179);
 		this.add.existing(press_enter_text);
+
+		// title_screen
+		this.add.image(160, 53, "title-screen");
+
+		// credits_text
+		this.add.image(160, 205, "credits-text");
 
 		this.background = background;
 		this.middleground = middleground;

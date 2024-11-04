@@ -75,7 +75,7 @@ export default class Preload extends Phaser.Scene {
 
 		this.sound.play("music", { loop: true });
 
-		this.scene.start("Level");
+		this.scene.start("Home");
 	}
 
 	/* END-USER-CODE */

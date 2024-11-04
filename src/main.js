@@ -1,4 +1,5 @@
 import GameOver from "./scenes/GameOver.js";
+import Home from "./scenes/Home.js";
 import Level from "./scenes/Level.js";
 import Preload from "./scenes/Preload.js";
 
@@ -25,6 +26,7 @@ window.addEventListener('load', function () {
 	});
 
 	game.scene.add("Preload", Preload);
+	game.scene.add("Home", Home);
 	game.scene.add("Level", Level);
 	game.scene.add("GameOver", GameOver);
 	game.scene.add("Boot", Boot, true);
