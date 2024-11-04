@@ -32,7 +32,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_ff2c1fac-1b89-4964-9354-db9c845177fb", {
+		this.cache.tilemap.add("levelMap_ff2f305b-08d2-490b-aa78-e88e5484bb57", {
 			format: 1,
 			data: {
 				width: 24,
@@ -88,7 +88,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_ff2c1fac-1b89-4964-9354-db9c845177fb");
+		const levelMap = this.add.tilemap("levelMap_ff2f305b-08d2-490b-aa78-e88e5484bb57");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -116,7 +116,7 @@ export default class Level extends Phaser.Scene {
 		middleground.setOrigin(0, 0);
 
 		// mainLayer
-		const mainLayer = levelMap.createLayer("mainLayer", ["tileset"], 0, 0);
+		const mainLayer = levelMap.createLayer("mainLayer", ["tileset"], 1, 1);
 
 		// enemiesLayer
 		const enemiesLayer = this.add.layer();
@@ -384,7 +384,7 @@ export default class Level extends Phaser.Scene {
 		props.add(rock_2);
 
 		// collisionsLayer
-		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 0, 0);
+		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 1, 1);
 		collisionsLayer.visible = false;
 
 		// slugZoneLayer

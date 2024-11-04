@@ -52,6 +52,8 @@
             "id": "33f86669-2ef0-4d45-b114-2085a44bf5e9",
             "label": "mainLayer",
             "scope": "CLASS",
+            "x": 1,
+            "y": 1,
             "tilemapId": "adbad958-e0fa-4083-a2bc-454b442abaf7"
         },
         {
@@ -786,6 +788,8 @@
             "id": "acb0f7e7-fdac-4ac2-82e8-81ef4fd5899d",
             "label": "collisionsLayer",
             "scope": "CLASS",
+            "x": 1,
+            "y": 1,
             "visible": false,
             "tilemapId": "adbad958-e0fa-4083-a2bc-454b442abaf7"
         },
