@@ -22,6 +22,9 @@
             },
             "x": 166,
             "y": 98,
+            "ArcadeComponent.active": true,
+            "body.width": 17,
+            "body.height": 19,
             "animationPlayMethod": 1,
             "animationKey": "carrot"
         }

@@ -66,178 +66,6 @@
             "y": 151
         },
         {
-            "type": "Image",
-            "id": "54aefe43-0919-409d-8e7c-868c163331d0",
-            "label": "rock",
-            "texture": {
-                "key": "atlas-props",
-                "frame": "rock"
-            },
-            "x": 256,
-            "y": 203.2,
-            "originX": 0,
-            "originY": 0
-        },
-        {
-            "type": "Image",
-            "id": "ed51c4a4-a30e-40c3-a5ea-ebff6d9e4e92",
-            "label": "plant_4",
-            "texture": {
-                "key": "atlas-props",
-                "frame": "plant"
-            },
-            "x": 32,
-            "y": 192,
-            "originX": 0,
-            "originY": 0
-        },
-        {
-            "type": "Image",
-            "id": "f2a3d5e3-1936-4697-a83e-78bb5c0c0453",
-            "label": "plant_5",
-            "texture": {
-                "key": "atlas-props",
-                "frame": "plant"
-            },
-            "x": 368,
-            "y": 192,
-            "originX": 0,
-            "originY": 0
-        },
-        {
-            "type": "Image",
-            "id": "a445ad4c-d7e3-46b1-890e-e0cedc9df242",
-            "label": "rock_1",
-            "texture": {
-                "key": "atlas-props",
-                "frame": "rock"
-            },
-            "x": 848,
-            "y": 187.2,
-            "originX": 0,
-            "originY": 0
-        },
-        {
-            "type": "Image",
-            "id": "f4613638-90c3-48fb-94b0-bcef8ce0375d",
-            "label": "plant_6",
-            "texture": {
-                "key": "atlas-props",
-                "frame": "plant"
-            },
-            "x": 2400,
-            "y": 192,
-            "originX": 0,
-            "originY": 0
-        },
-        {
-            "type": "Image",
-            "id": "c9c8eb8e-e51b-4b26-8bc7-da8338c78620",
-            "label": "plant_7",
-            "texture": {
-                "key": "atlas-props",
-                "frame": "plant"
-            },
-            "x": 2432,
-            "y": 192,
-            "originX": 0,
-            "originY": 0
-        },
-        {
-            "type": "Image",
-            "id": "6b97764c-015f-4b2d-96b6-8724e7d21019",
-            "label": "plant_8",
-            "texture": {
-                "key": "atlas-props",
-                "frame": "plant"
-            },
-            "x": 2288,
-            "y": 192,
-            "originX": 0,
-            "originY": 0
-        },
-        {
-            "type": "Image",
-            "id": "b79b64c3-1dff-41a9-9c30-eb85ccccd1b6",
-            "label": "plant_9",
-            "texture": {
-                "key": "atlas-props",
-                "frame": "plant"
-            },
-            "x": 714,
-            "y": 192,
-            "originX": 0,
-            "originY": 0
-        },
-        {
-            "type": "Image",
-            "id": "c272b042-3f54-4fbd-b642-7d98fb442e77",
-            "label": "rock_2",
-            "texture": {
-                "key": "atlas-props",
-                "frame": "rock"
-            },
-            "x": 1464,
-            "y": 200,
-            "originX": 0,
-            "originY": 0
-        },
-        {
-            "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
-            "id": "97a669d0-b733-4015-8cb8-79a49b2fe17b",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "carrot",
-            "x": 936,
-            "y": 329.833333333333
-        },
-        {
-            "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
-            "id": "66fdff11-b6dd-4991-8f6e-7bf6d6e3c9c3",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "carrot_1",
-            "x": 766.833333333333,
-            "y": 81.5
-        },
-        {
-            "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
-            "id": "4898e682-9ecb-4249-a2bf-c0b24bc1dce0",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "carrot_2",
-            "x": 404.5,
-            "y": 67
-        },
-        {
-            "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
-            "id": "38a2615e-a464-41c3-a789-f208e1f2251b",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "carrot_5",
-            "x": 1985.83333333333,
-            "y": 48.1666666666666
-        },
-        {
-            "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
-            "id": "d7d112c4-1635-49f1-8012-698ab459bb28",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "carrot_3",
-            "x": 1484.66666666667,
-            "y": 45.5
-        },
-        {
             "type": "Layer",
             "id": "2d1d1905-e0b3-42ba-a943-a93c140c8d29",
             "label": "enemiesLayer",
@@ -825,6 +653,192 @@
             ]
         },
         {
+            "type": "Layer",
+            "id": "3b6afccf-adc3-4ed7-8e17-589ee127d56e",
+            "label": "carrotsLayer",
+            "list": [
+                {
+                    "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+                    "id": "97a669d0-b733-4015-8cb8-79a49b2fe17b",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "carrot",
+                    "x": 936,
+                    "y": 311
+                },
+                {
+                    "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+                    "id": "66fdff11-b6dd-4991-8f6e-7bf6d6e3c9c3",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "carrot_1",
+                    "x": 766.8333129882812,
+                    "y": 81.5
+                },
+                {
+                    "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+                    "id": "4898e682-9ecb-4249-a2bf-c0b24bc1dce0",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "carrot_2",
+                    "x": 404.5,
+                    "y": 67
+                },
+                {
+                    "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+                    "id": "38a2615e-a464-41c3-a789-f208e1f2251b",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "carrot_5",
+                    "x": 1985.8333740234375,
+                    "y": 48.16666793823242
+                },
+                {
+                    "prefabId": "60698f43-f8e6-4356-b34c-ef80e6fc4e72",
+                    "id": "d7d112c4-1635-49f1-8012-698ab459bb28",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "carrot_3",
+                    "x": 1484.6666259765625,
+                    "y": 45.5
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "4165df99-d5f0-430e-87ea-d2d3c8bed3ac",
+            "label": "props",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "54aefe43-0919-409d-8e7c-868c163331d0",
+                    "label": "rock",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 256,
+                    "y": 203.1999969482422,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "ed51c4a4-a30e-40c3-a5ea-ebff6d9e4e92",
+                    "label": "plant_4",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 32,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "f2a3d5e3-1936-4697-a83e-78bb5c0c0453",
+                    "label": "plant_5",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 368,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "a445ad4c-d7e3-46b1-890e-e0cedc9df242",
+                    "label": "rock_1",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 848,
+                    "y": 187.1999969482422,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "f4613638-90c3-48fb-94b0-bcef8ce0375d",
+                    "label": "plant_6",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 2400,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "c9c8eb8e-e51b-4b26-8bc7-da8338c78620",
+                    "label": "plant_7",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 2432,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "6b97764c-015f-4b2d-96b6-8724e7d21019",
+                    "label": "plant_8",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 2288,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "b79b64c3-1dff-41a9-9c30-eb85ccccd1b6",
+                    "label": "plant_9",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 714,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "c272b042-3f54-4fbd-b642-7d98fb442e77",
+                    "label": "rock_2",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 1464,
+                    "y": 200,
+                    "originX": 0,
+                    "originY": 0
+                }
+            ]
+        },
+        {
             "type": "EditableTilemapLayer",
             "id": "acb0f7e7-fdac-4ac2-82e8-81ef4fd5899d",
             "label": "collisionsLayer",
@@ -966,6 +980,17 @@
             "object2": "enemiesLayer.list",
             "overlapOnly": true,
             "collideCallback": "this.playerVsEnemies",
+            "callbackContext": "this"
+        },
+        {
+            "id": "8176556e-04bc-4d5c-bc14-9b3950e0ded3",
+            "type": "Collider",
+            "label": "collider",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "carrotsLayer.list",
+            "overlapOnly": true,
+            "collideCallback": "this.playerVsCarrots",
             "callbackContext": "this"
         }
     ],

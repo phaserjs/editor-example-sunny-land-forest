@@ -11,6 +11,8 @@ export default class Carrot extends Phaser.GameObjects.Sprite {
 	constructor(scene, x, y, texture, frame) {
 		super(scene, x ?? 166, y ?? 98, texture || "atlas", frame ?? "carrot/carrot-1");
 
+		scene.physics.add.existing(this, false);
+		this.body.setSize(17, 19, false);
 		this.play("carrot");
 
 		/* START-USER-CTR-CODE */

@@ -6,11 +6,11 @@
 import FixedToCameraComp from "../components/FixedToCameraComp.js";
 import ParallaxComp from "../components/ParallaxComp.js";
 import Player from "../prefabs/Player.js";
-import Carrot from "../prefabs/Carrot.js";
 import Bee from "../prefabs/Bee.js";
 import Plant from "../prefabs/Plant.js";
 import Slug from "../prefabs/Slug.js";
 import Chest from "../prefabs/Chest.js";
+import Carrot from "../prefabs/Carrot.js";
 /* START-USER-IMPORTS */
 import EnemyDeath from "../prefabs/EnemyDeath.js";
 /* END-USER-IMPORTS */
@@ -29,7 +29,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_10074d7b-a767-45d0-aad9-55161664b496", {
+		this.cache.tilemap.add("levelMap_09df912c-4158-4938-985b-ce2adaf6d027", {
 			format: 1,
 			data: {
 				width: 24,
@@ -85,7 +85,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_10074d7b-a767-45d0-aad9-55161664b496");
+		const levelMap = this.add.tilemap("levelMap_09df912c-4158-4938-985b-ce2adaf6d027");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -118,62 +118,6 @@ export default class Level extends Phaser.Scene {
 		// player
 		const player = new Player(this, 435, 151);
 		this.add.existing(player);
-
-		// rock
-		const rock = this.add.image(256, 203.2, "atlas-props", "rock");
-		rock.setOrigin(0, 0);
-
-		// plant_4
-		const plant_4 = this.add.image(32, 192, "atlas-props", "plant");
-		plant_4.setOrigin(0, 0);
-
-		// plant_5
-		const plant_5 = this.add.image(368, 192, "atlas-props", "plant");
-		plant_5.setOrigin(0, 0);
-
-		// rock_1
-		const rock_1 = this.add.image(848, 187.2, "atlas-props", "rock");
-		rock_1.setOrigin(0, 0);
-
-		// plant_6
-		const plant_6 = this.add.image(2400, 192, "atlas-props", "plant");
-		plant_6.setOrigin(0, 0);
-
-		// plant_7
-		const plant_7 = this.add.image(2432, 192, "atlas-props", "plant");
-		plant_7.setOrigin(0, 0);
-
-		// plant_8
-		const plant_8 = this.add.image(2288, 192, "atlas-props", "plant");
-		plant_8.setOrigin(0, 0);
-
-		// plant_9
-		const plant_9 = this.add.image(714, 192, "atlas-props", "plant");
-		plant_9.setOrigin(0, 0);
-
-		// rock_2
-		const rock_2 = this.add.image(1464, 200, "atlas-props", "rock");
-		rock_2.setOrigin(0, 0);
-
-		// carrot
-		const carrot = new Carrot(this, 936, 329.833333333333);
-		this.add.existing(carrot);
-
-		// carrot_1
-		const carrot_1 = new Carrot(this, 766.833333333333, 81.5);
-		this.add.existing(carrot_1);
-
-		// carrot_2
-		const carrot_2 = new Carrot(this, 404.5, 67);
-		this.add.existing(carrot_2);
-
-		// carrot_5
-		const carrot_5 = new Carrot(this, 1985.83333333333, 48.1666666666666);
-		this.add.existing(carrot_5);
-
-		// carrot_3
-		const carrot_3 = new Carrot(this, 1484.66666666667, 45.5);
-		this.add.existing(carrot_3);
 
 		// enemiesLayer
 		const enemiesLayer = this.add.layer();
@@ -394,6 +338,77 @@ export default class Level extends Phaser.Scene {
 		star_25.play("star");
 		starsLayer.add(star_25);
 
+		// carrotsLayer
+		const carrotsLayer = this.add.layer();
+
+		// carrot
+		const carrot = new Carrot(this, 936, 311);
+		carrotsLayer.add(carrot);
+
+		// carrot_1
+		const carrot_1 = new Carrot(this, 766.8333129882812, 81.5);
+		carrotsLayer.add(carrot_1);
+
+		// carrot_2
+		const carrot_2 = new Carrot(this, 404.5, 67);
+		carrotsLayer.add(carrot_2);
+
+		// carrot_5
+		const carrot_5 = new Carrot(this, 1985.8333740234375, 48.16666793823242);
+		carrotsLayer.add(carrot_5);
+
+		// carrot_3
+		const carrot_3 = new Carrot(this, 1484.6666259765625, 45.5);
+		carrotsLayer.add(carrot_3);
+
+		// props
+		const props = this.add.layer();
+
+		// rock
+		const rock = this.add.image(256, 203.1999969482422, "atlas-props", "rock");
+		rock.setOrigin(0, 0);
+		props.add(rock);
+
+		// plant_4
+		const plant_4 = this.add.image(32, 192, "atlas-props", "plant");
+		plant_4.setOrigin(0, 0);
+		props.add(plant_4);
+
+		// plant_5
+		const plant_5 = this.add.image(368, 192, "atlas-props", "plant");
+		plant_5.setOrigin(0, 0);
+		props.add(plant_5);
+
+		// rock_1
+		const rock_1 = this.add.image(848, 187.1999969482422, "atlas-props", "rock");
+		rock_1.setOrigin(0, 0);
+		props.add(rock_1);
+
+		// plant_6
+		const plant_6 = this.add.image(2400, 192, "atlas-props", "plant");
+		plant_6.setOrigin(0, 0);
+		props.add(plant_6);
+
+		// plant_7
+		const plant_7 = this.add.image(2432, 192, "atlas-props", "plant");
+		plant_7.setOrigin(0, 0);
+		props.add(plant_7);
+
+		// plant_8
+		const plant_8 = this.add.image(2288, 192, "atlas-props", "plant");
+		plant_8.setOrigin(0, 0);
+		props.add(plant_8);
+
+		// plant_9
+		const plant_9 = this.add.image(714, 192, "atlas-props", "plant");
+		plant_9.setOrigin(0, 0);
+		props.add(plant_9);
+
+		// rock_2
+		const rock_2 = this.add.image(1464, 200, "atlas-props", "rock");
+		rock_2.setOrigin(0, 0);
+		props.add(rock_2);
+
 		// collisionsLayer
 		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 0, 0);
 		collisionsLayer.visible = false;
@@ -415,6 +430,9 @@ export default class Level extends Phaser.Scene {
 
 		// playerVsEnemies
 		this.physics.add.overlap(player, enemiesLayer.list, this.playerVsEnemies, undefined, this);
+
+		// collider
+		this.physics.add.overlap(player, carrotsLayer.list, this.playerVsCarrots, undefined, this);
 
 		// background (components)
 		new FixedToCameraComp(background);
@@ -546,6 +564,25 @@ export default class Level extends Phaser.Scene {
 		}
 
 		return tile.index === 1 || tile.index === 2 || tile.index === 5;
+	}
+
+	/**
+	 * 
+	 * @param {Player} player 
+	 * @param {Carrot} carrot 
+	 */
+	playerVsCarrots(player, carrot) {
+
+		carrot.destroy();
+
+		// this.audioCarrot.play();
+
+        player.health++;
+
+        if (player.health > 3) {
+
+            player.health = 3;
+        }
 	}
 
 	/**
