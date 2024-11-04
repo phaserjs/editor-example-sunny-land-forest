@@ -62,8 +62,8 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "x": 70,
-            "y": 168
+            "x": 131,
+            "y": 167
         },
         {
             "type": "Image",

@@ -28,7 +28,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_778079ce-2df1-4cf5-ab4e-f8c346df7353", {
+		this.cache.tilemap.add("levelMap_48474279-8032-4d10-85e4-3e6d0c77dc69", {
 			format: 1,
 			data: {
 				width: 24,
@@ -84,7 +84,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_778079ce-2df1-4cf5-ab4e-f8c346df7353");
+		const levelMap = this.add.tilemap("levelMap_48474279-8032-4d10-85e4-3e6d0c77dc69");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -115,7 +115,7 @@ export default class Level extends Phaser.Scene {
 		const mainLayer = levelMap.createLayer("mainLayer", ["tileset"], 0, 0);
 
 		// player
-		const player = new Player(this, 70, 168);
+		const player = new Player(this, 131, 167);
 		this.add.existing(player);
 
 		// rock
@@ -582,7 +582,7 @@ export default class Level extends Phaser.Scene {
 
 		if (this.player.onLadder) {
 
-			this.player.play("player-climb");
+			this.player.play("player-climb", true);
 
 			let vel = 30;
 
