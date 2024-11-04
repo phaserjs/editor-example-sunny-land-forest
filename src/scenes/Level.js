@@ -32,7 +32,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_ff2f305b-08d2-490b-aa78-e88e5484bb57", {
+		this.cache.tilemap.add("levelMap_2ae3c2f7-af90-4f64-8cc5-abb9f0ed4e07", {
 			format: 1,
 			data: {
 				width: 24,
@@ -88,7 +88,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_ff2f305b-08d2-490b-aa78-e88e5484bb57");
+		const levelMap = this.add.tilemap("levelMap_2ae3c2f7-af90-4f64-8cc5-abb9f0ed4e07");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -116,7 +116,101 @@ export default class Level extends Phaser.Scene {
 		middleground.setOrigin(0, 0);
 
 		// mainLayer
-		const mainLayer = levelMap.createLayer("mainLayer", ["tileset"], 1, 1);
+		const mainLayer = levelMap.createLayer("mainLayer", ["tileset"], 0.5, 0.5);
+
+		// props
+		const props = this.add.layer();
+
+		// rock
+		const rock = this.add.image(256, 203.1999969482422, "atlas-props", "rock");
+		rock.setOrigin(0, 0);
+		props.add(rock);
+
+		// plant_4
+		const plant_4 = this.add.image(32, 192, "atlas-props", "plant");
+		plant_4.setOrigin(0, 0);
+		props.add(plant_4);
+
+		// plant_5
+		const plant_5 = this.add.image(368, 192, "atlas-props", "plant");
+		plant_5.setOrigin(0, 0);
+		props.add(plant_5);
+
+		// rock_1
+		const rock_1 = this.add.image(848, 187.1999969482422, "atlas-props", "rock");
+		rock_1.setOrigin(0, 0);
+		props.add(rock_1);
+
+		// plant_6
+		const plant_6 = this.add.image(2400, 192, "atlas-props", "plant");
+		plant_6.setOrigin(0, 0);
+		props.add(plant_6);
+
+		// plant_7
+		const plant_7 = this.add.image(2432, 192, "atlas-props", "plant");
+		plant_7.setOrigin(0, 0);
+		props.add(plant_7);
+
+		// plant_8
+		const plant_8 = this.add.image(2288, 192, "atlas-props", "plant");
+		plant_8.setOrigin(0, 0);
+		props.add(plant_8);
+
+		// plant_9
+		const plant_9 = this.add.image(714, 192, "atlas-props", "plant");
+		plant_9.setOrigin(0, 0);
+		props.add(plant_9);
+
+		// rock_2
+		const rock_2 = this.add.image(1497, 72, "atlas-props", "rock");
+		rock_2.setOrigin(0, 0);
+		props.add(rock_2);
+
+		// tree
+		const tree = this.add.image(122.5, 114.69999694824219, "atlas-props", "tree");
+		props.add(tree);
+
+		// mushroom_red
+		const mushroom_red = this.add.image(187.5, 178.8000030517578, "atlas-props", "mushroom-red");
+		props.add(mushroom_red);
+
+		// vine
+		const vine = this.add.image(68.5, 26.5, "atlas-props", "vine");
+		props.add(vine);
+
+		// vine_1
+		const vine_1 = this.add.image(420.5, 26.5, "atlas-props", "vine");
+		props.add(vine_1);
+
+		// mushroom_brown
+		const mushroom_brown = this.add.image(284.5, 192.5, "atlas-props", "mushroom-brown");
+		props.add(mushroom_brown);
+
+		// tree_1
+		const tree_1 = this.add.image(1920, 3.2, "atlas-props", "tree");
+		tree_1.setOrigin(0, 0);
+		props.add(tree_1);
+
+		// house
+		const house = this.add.image(2432.5, 125.70000076293945, "atlas-props", "house");
+		props.add(house);
+
+		// vine_2
+		const vine_2 = this.add.image(800.5, 26.5, "atlas-props", "vine");
+		props.add(vine_2);
+
+		// vine_3
+		const vine_3 = this.add.image(2196.5, 26.5, "atlas-props", "vine");
+		props.add(vine_3);
+
+		// mushroom_red_1
+		const mushroom_red_1 = this.add.image(2315.5, 194.8000030517578, "atlas-props", "mushroom-red");
+		props.add(mushroom_red_1);
+
+		// mushroom_red_2
+		const mushroom_red_2 = this.add.image(2254, 196, "atlas-props", "mushroom-red");
+		mushroom_red_2.flipX = true;
+		props.add(mushroom_red_2);
 
 		// enemiesLayer
 		const enemiesLayer = this.add.layer();
@@ -335,56 +429,8 @@ export default class Level extends Phaser.Scene {
 		const player = new Player(this, 64, 160);
 		this.add.existing(player);
 
-		// props
-		const props = this.add.layer();
-
-		// rock
-		const rock = this.add.image(256, 203.1999969482422, "atlas-props", "rock");
-		rock.setOrigin(0, 0);
-		props.add(rock);
-
-		// plant_4
-		const plant_4 = this.add.image(32, 192, "atlas-props", "plant");
-		plant_4.setOrigin(0, 0);
-		props.add(plant_4);
-
-		// plant_5
-		const plant_5 = this.add.image(368, 192, "atlas-props", "plant");
-		plant_5.setOrigin(0, 0);
-		props.add(plant_5);
-
-		// rock_1
-		const rock_1 = this.add.image(848, 187.1999969482422, "atlas-props", "rock");
-		rock_1.setOrigin(0, 0);
-		props.add(rock_1);
-
-		// plant_6
-		const plant_6 = this.add.image(2400, 192, "atlas-props", "plant");
-		plant_6.setOrigin(0, 0);
-		props.add(plant_6);
-
-		// plant_7
-		const plant_7 = this.add.image(2432, 192, "atlas-props", "plant");
-		plant_7.setOrigin(0, 0);
-		props.add(plant_7);
-
-		// plant_8
-		const plant_8 = this.add.image(2288, 192, "atlas-props", "plant");
-		plant_8.setOrigin(0, 0);
-		props.add(plant_8);
-
-		// plant_9
-		const plant_9 = this.add.image(714, 192, "atlas-props", "plant");
-		plant_9.setOrigin(0, 0);
-		props.add(plant_9);
-
-		// rock_2
-		const rock_2 = this.add.image(1497, 72, "atlas-props", "rock");
-		rock_2.setOrigin(0, 0);
-		props.add(rock_2);
-
 		// collisionsLayer
-		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 1, 1);
+		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 0.5, 0.5);
 		collisionsLayer.visible = false;
 
 		// slugZoneLayer

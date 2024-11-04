@@ -2,7 +2,6 @@
     "id": "01aefa93-6044-4159-8358-7e91310aa05f",
     "sceneType": "SCENE",
     "settings": {
-        "snapEnabled": true,
         "exportClass": true,
         "autoImport": true,
         "importFileExtension": true,
@@ -52,9 +51,257 @@
             "id": "33f86669-2ef0-4d45-b114-2085a44bf5e9",
             "label": "mainLayer",
             "scope": "CLASS",
-            "x": 1,
-            "y": 1,
+            "x": 0.5,
+            "y": 0.5,
             "tilemapId": "adbad958-e0fa-4083-a2bc-454b442abaf7"
+        },
+        {
+            "type": "Layer",
+            "id": "4165df99-d5f0-430e-87ea-d2d3c8bed3ac",
+            "label": "props",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "54aefe43-0919-409d-8e7c-868c163331d0",
+                    "label": "rock",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 256,
+                    "y": 203.1999969482422,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "ed51c4a4-a30e-40c3-a5ea-ebff6d9e4e92",
+                    "label": "plant_4",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 32,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "f2a3d5e3-1936-4697-a83e-78bb5c0c0453",
+                    "label": "plant_5",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 368,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "a445ad4c-d7e3-46b1-890e-e0cedc9df242",
+                    "label": "rock_1",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 848,
+                    "y": 187.1999969482422,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "f4613638-90c3-48fb-94b0-bcef8ce0375d",
+                    "label": "plant_6",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 2400,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "c9c8eb8e-e51b-4b26-8bc7-da8338c78620",
+                    "label": "plant_7",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 2432,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "6b97764c-015f-4b2d-96b6-8724e7d21019",
+                    "label": "plant_8",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 2288,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "b79b64c3-1dff-41a9-9c30-eb85ccccd1b6",
+                    "label": "plant_9",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "plant"
+                    },
+                    "x": 714,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "c272b042-3f54-4fbd-b642-7d98fb442e77",
+                    "label": "rock_2",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 1497,
+                    "y": 72,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "dda7ee5f-ec13-488c-8530-fc90e9fa0824",
+                    "label": "tree",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "tree"
+                    },
+                    "x": 122.5,
+                    "y": 114.69999694824219
+                },
+                {
+                    "type": "Image",
+                    "id": "f625782f-b33a-4293-88b8-4834c52c3f6d",
+                    "label": "mushroom_red",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "mushroom-red"
+                    },
+                    "x": 187.5,
+                    "y": 178.8000030517578
+                },
+                {
+                    "type": "Image",
+                    "id": "9c1889e6-7cc0-4189-85be-e9e1f82c6cc5",
+                    "label": "vine",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "vine"
+                    },
+                    "x": 68.5,
+                    "y": 26.5
+                },
+                {
+                    "type": "Image",
+                    "id": "434c1661-43b1-4ef7-910b-a9a1f8d2afe8",
+                    "label": "vine_1",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "vine"
+                    },
+                    "x": 420.5,
+                    "y": 26.5
+                },
+                {
+                    "type": "Image",
+                    "id": "6419e52d-c3ca-4308-a398-ecf942ff5485",
+                    "label": "mushroom_brown",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "mushroom-brown"
+                    },
+                    "x": 284.5,
+                    "y": 192.5
+                },
+                {
+                    "type": "Image",
+                    "id": "ed168b56-f552-47ff-b7f6-53ddf1044450",
+                    "label": "tree_1",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "tree"
+                    },
+                    "x": 1920,
+                    "y": 3.2,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "522bef99-038b-4c35-b437-b66aed30cc27",
+                    "label": "house",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "house"
+                    },
+                    "x": 2432.5,
+                    "y": 125.70000076293945
+                },
+                {
+                    "type": "Image",
+                    "id": "37a5b3f1-6d98-4f5e-bf41-a822109226a1",
+                    "label": "vine_2",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "vine"
+                    },
+                    "x": 800.5,
+                    "y": 26.5
+                },
+                {
+                    "type": "Image",
+                    "id": "449cd51e-8d79-4758-957f-e9d749e7698d",
+                    "label": "vine_3",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "vine"
+                    },
+                    "x": 2196.5,
+                    "y": 26.5
+                },
+                {
+                    "type": "Image",
+                    "id": "b80113a1-5bdc-41d1-86f1-4330e1c154b1",
+                    "label": "mushroom_red_1",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "mushroom-red"
+                    },
+                    "x": 2315.5,
+                    "y": 194.8000030517578
+                },
+                {
+                    "type": "Image",
+                    "id": "c5ce66c0-4a05-4b44-b079-94657c95a697",
+                    "label": "mushroom_red_2",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "mushroom-red"
+                    },
+                    "x": 2254,
+                    "y": 196,
+                    "flipX": true
+                }
+            ]
         },
         {
             "type": "Layer",
@@ -660,136 +907,12 @@
             "y": 160
         },
         {
-            "type": "Layer",
-            "id": "4165df99-d5f0-430e-87ea-d2d3c8bed3ac",
-            "label": "props",
-            "list": [
-                {
-                    "type": "Image",
-                    "id": "54aefe43-0919-409d-8e7c-868c163331d0",
-                    "label": "rock",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "rock"
-                    },
-                    "x": 256,
-                    "y": 203.1999969482422,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
-                    "id": "ed51c4a4-a30e-40c3-a5ea-ebff6d9e4e92",
-                    "label": "plant_4",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "plant"
-                    },
-                    "x": 32,
-                    "y": 192,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
-                    "id": "f2a3d5e3-1936-4697-a83e-78bb5c0c0453",
-                    "label": "plant_5",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "plant"
-                    },
-                    "x": 368,
-                    "y": 192,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
-                    "id": "a445ad4c-d7e3-46b1-890e-e0cedc9df242",
-                    "label": "rock_1",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "rock"
-                    },
-                    "x": 848,
-                    "y": 187.1999969482422,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
-                    "id": "f4613638-90c3-48fb-94b0-bcef8ce0375d",
-                    "label": "plant_6",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "plant"
-                    },
-                    "x": 2400,
-                    "y": 192,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
-                    "id": "c9c8eb8e-e51b-4b26-8bc7-da8338c78620",
-                    "label": "plant_7",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "plant"
-                    },
-                    "x": 2432,
-                    "y": 192,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
-                    "id": "6b97764c-015f-4b2d-96b6-8724e7d21019",
-                    "label": "plant_8",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "plant"
-                    },
-                    "x": 2288,
-                    "y": 192,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
-                    "id": "b79b64c3-1dff-41a9-9c30-eb85ccccd1b6",
-                    "label": "plant_9",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "plant"
-                    },
-                    "x": 714,
-                    "y": 192,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
-                    "id": "c272b042-3f54-4fbd-b642-7d98fb442e77",
-                    "label": "rock_2",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "rock"
-                    },
-                    "x": 1497,
-                    "y": 72,
-                    "originX": 0,
-                    "originY": 0
-                }
-            ]
-        },
-        {
             "type": "EditableTilemapLayer",
             "id": "acb0f7e7-fdac-4ac2-82e8-81ef4fd5899d",
             "label": "collisionsLayer",
             "scope": "CLASS",
-            "x": 1,
-            "y": 1,
+            "x": 0.5,
+            "y": 0.5,
             "visible": false,
             "tilemapId": "adbad958-e0fa-4083-a2bc-454b442abaf7"
         },
