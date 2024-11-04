@@ -28,7 +28,6 @@
             "body.height": 12,
             "body.offset.x": 9,
             "body.offset.y": 13,
-            "animationPlayMethod": 1,
             "animationKey": "chest"
         }
     ],

@@ -37,10 +37,10 @@ export default class Bee extends Phaser.GameObjects.Sprite {
 		/* END-USER-CTR-CODE */
 	}
 
+	/** @type {number} */
 	distance = 0;
+	/** @type {boolean} */
 	horizontal = false;
-	initX = 0;
-	initY = 0;
 
 	/* START-USER-CODE */
 

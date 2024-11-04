@@ -4,6 +4,7 @@
 /* START OF COMPILED CODE */
 
 /* START-USER-IMPORTS */
+import LootStar from "./LootStar.js";
 /* END-USER-IMPORTS */
 
 export default class Chest extends Phaser.GameObjects.Sprite {
@@ -15,7 +16,6 @@ export default class Chest extends Phaser.GameObjects.Sprite {
 		scene.physics.add.existing(this, false);
 		this.body.setOffset(9, 13);
 		this.body.setSize(19, 12, false);
-		this.play("chest");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -29,17 +29,17 @@ export default class Chest extends Phaser.GameObjects.Sprite {
 	open() {
 
 		this.opened = true;
+
 		this.play("chest");
 
-		// // TODO
-		// for (var i = 0; i <= 5; i++) {
+		for (var i = 0; i <= 5; i++) {
 
-		// 	var temp = new Star(game, this.x, this.y - 15);
+			var temp = new LootStar(this.scene, this.x, this.y - 15);
 
-		// 	game.add.existing(temp);
+			this.scene.lootLayer.add(temp);
+		}
 
-		// 	loot_group.add(temp);
-		// }
+		this.scene.sound.play("chest");
 	}
 
 	/* END-USER-CODE */

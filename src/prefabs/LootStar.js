@@ -6,7 +6,7 @@
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-export default class Star extends Phaser.GameObjects.Sprite {
+export default class LootStar extends Phaser.GameObjects.Sprite {
 
 	constructor(scene, x, y, texture, frame) {
 		super(scene, x ?? 150, y ?? 97, texture || "atlas", frame ?? "star/star-1");
@@ -21,13 +21,17 @@ export default class Star extends Phaser.GameObjects.Sprite {
 		this.play("star");
 
 		/* START-USER-CTR-CODE */
+
+		this.body.velocity.y = Phaser.Math.Between(150, 220);
+		this.body.velocity.x = Phaser.Math.Between(-30, 31);
+
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
 
 	bounceCount = 0;
-	able = false;
+	collectable = false;
 
 	preUpdate(time, delta) {
 
@@ -40,7 +44,7 @@ export default class Star extends Phaser.GameObjects.Sprite {
 
 		if (this.bounceCount >= 3) {
 
-			this.able = true;
+			this.collectable = true;
 		}
 	}
 
