@@ -78,15 +78,13 @@
                         "x",
                         "y",
                         "distance",
-                        "horizontal",
-                        "visible"
+                        "horizontal"
                     ],
                     "label": "bee_1",
                     "distance": 30,
                     "horizontal": true,
                     "x": 768,
-                    "y": 159,
-                    "visible": true
+                    "y": 159
                 },
                 {
                     "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
@@ -94,14 +92,12 @@
                     "unlock": [
                         "x",
                         "y",
-                        "distance",
-                        "visible"
+                        "distance"
                     ],
                     "label": "bee_2",
                     "distance": 30,
                     "x": 960,
-                    "y": 160,
-                    "visible": true
+                    "y": 160
                 },
                 {
                     "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
@@ -110,15 +106,13 @@
                         "x",
                         "y",
                         "horizontal",
-                        "distance",
-                        "visible"
+                        "distance"
                     ],
                     "label": "bee_3",
                     "distance": 30,
                     "horizontal": true,
                     "x": 1776,
-                    "y": 144,
-                    "visible": true
+                    "y": 144
                 },
                 {
                     "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
@@ -126,14 +120,12 @@
                     "unlock": [
                         "x",
                         "y",
-                        "distance",
-                        "visible"
+                        "distance"
                     ],
                     "label": "bee_4",
                     "distance": 30,
                     "x": 2272,
-                    "y": 144,
-                    "visible": true
+                    "y": 144
                 },
                 {
                     "prefabId": "3d1a44de-031d-4659-8aea-bca62d81360b",
@@ -661,8 +653,8 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "x": 579,
-            "y": 343
+            "x": 609,
+            "y": 162
         },
         {
             "type": "Layer",
@@ -781,8 +773,8 @@
                         "key": "atlas-props",
                         "frame": "rock"
                     },
-                    "x": 1464,
-                    "y": 200,
+                    "x": 1497,
+                    "y": 72,
                     "originX": 0,
                     "originY": 0
                 }
@@ -793,6 +785,7 @@
             "id": "acb0f7e7-fdac-4ac2-82e8-81ef4fd5899d",
             "label": "collisionsLayer",
             "scope": "CLASS",
+            "visible": false,
             "tilemapId": "adbad958-e0fa-4083-a2bc-454b442abaf7"
         },
         {

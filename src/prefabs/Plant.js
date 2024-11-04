@@ -38,11 +38,11 @@ export default class Plant extends Phaser.GameObjects.Sprite {
 
 		if (distance < 65) {
 
-			this.play("piranha-plant-attack");
+			this.play("piranha-plant-attack", true);
 
 		} else {
 
-			this.play("piranha-plant");
+			this.play("piranha-plant", true);
 		}
 	}
 

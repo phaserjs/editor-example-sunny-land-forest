@@ -31,7 +31,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_43f2d1d9-ea6c-4d90-8071-b2e6501ed0d5", {
+		this.cache.tilemap.add("levelMap_e9eb4bc9-12fa-4314-8f06-d12fdaefe51f", {
 			format: 1,
 			data: {
 				width: 24,
@@ -87,7 +87,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_43f2d1d9-ea6c-4d90-8071-b2e6501ed0d5");
+		const levelMap = this.add.tilemap("levelMap_e9eb4bc9-12fa-4314-8f06-d12fdaefe51f");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -126,22 +126,18 @@ export default class Level extends Phaser.Scene {
 
 		// bee_1
 		const bee_1 = new Bee(this, 768, 159);
-		bee_1.visible = true;
 		enemiesLayer.add(bee_1);
 
 		// bee_2
 		const bee_2 = new Bee(this, 960, 160);
-		bee_2.visible = true;
 		enemiesLayer.add(bee_2);
 
 		// bee_3
 		const bee_3 = new Bee(this, 1776, 144);
-		bee_3.visible = true;
 		enemiesLayer.add(bee_3);
 
 		// bee_4
 		const bee_4 = new Bee(this, 2272, 144);
-		bee_4.visible = true;
 		enemiesLayer.add(bee_4);
 
 		// plant
@@ -335,7 +331,7 @@ export default class Level extends Phaser.Scene {
 		carrotsLayer.add(carrot_3);
 
 		// player
-		const player = new Player(this, 579, 343);
+		const player = new Player(this, 609, 162);
 		this.add.existing(player);
 
 		// props
@@ -382,12 +378,13 @@ export default class Level extends Phaser.Scene {
 		props.add(plant_9);
 
 		// rock_2
-		const rock_2 = this.add.image(1464, 200, "atlas-props", "rock");
+		const rock_2 = this.add.image(1497, 72, "atlas-props", "rock");
 		rock_2.setOrigin(0, 0);
 		props.add(rock_2);
 
 		// collisionsLayer
 		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 0, 0);
+		collisionsLayer.visible = false;
 
 		// hud
 		const hud = this.add.container(0, 0);
