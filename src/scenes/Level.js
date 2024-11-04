@@ -6,12 +6,11 @@
 import FixedToCameraComp from "../components/FixedToCameraComp.js";
 import ParallaxComp from "../components/ParallaxComp.js";
 import Player from "../prefabs/Player.js";
-import Slug from "../prefabs/Slug.js";
+import Carrot from "../prefabs/Carrot.js";
 import Bee from "../prefabs/Bee.js";
 import Plant from "../prefabs/Plant.js";
+import Slug from "../prefabs/Slug.js";
 import Chest from "../prefabs/Chest.js";
-import Carrot from "../prefabs/Carrot.js";
-import Star from "../prefabs/Star.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -29,7 +28,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_0db33bea-213d-4171-afd3-21db3186d571", {
+		this.cache.tilemap.add("levelMap_778079ce-2df1-4cf5-ab4e-f8c346df7353", {
 			format: 1,
 			data: {
 				width: 24,
@@ -85,7 +84,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_0db33bea-213d-4171-afd3-21db3186d571");
+		const levelMap = this.add.tilemap("levelMap_778079ce-2df1-4cf5-ab4e-f8c346df7353");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -113,89 +112,11 @@ export default class Level extends Phaser.Scene {
 		middleground.setOrigin(0, 0);
 
 		// mainLayer
-		levelMap.createLayer("mainLayer", ["tileset"], 0, 0);
+		const mainLayer = levelMap.createLayer("mainLayer", ["tileset"], 0, 0);
 
 		// player
-		const player = new Player(this, 84, 167);
+		const player = new Player(this, 70, 168);
 		this.add.existing(player);
-
-		// slug
-		const slug = new Slug(this, 192, 192);
-		this.add.existing(slug);
-
-		// slug_1
-		const slug_1 = new Slug(this, 288, 208);
-		this.add.existing(slug_1);
-
-		// slug_2
-		const slug_2 = new Slug(this, 496, 32);
-		this.add.existing(slug_2);
-
-		// bee
-		const bee = new Bee(this, 528, 160);
-		this.add.existing(bee);
-
-		// plant
-		const plant = new Plant(this, 672, 192);
-		this.add.existing(plant);
-
-		// bee_1
-		const bee_1 = new Bee(this, 768, 160);
-		this.add.existing(bee_1);
-
-		// bee_2
-		const bee_2 = new Bee(this, 960, 160);
-		this.add.existing(bee_2);
-
-		// plant_1
-		const plant_1 = new Plant(this, 1024, 112);
-		this.add.existing(plant_1);
-
-		// chest
-		const chest = new Chest(this, 1136, 192);
-		this.add.existing(chest);
-
-		// chest_1
-		const chest_1 = new Chest(this, 512, 384);
-		this.add.existing(chest_1);
-
-		// slug_3
-		const slug_3 = new Slug(this, 1488, 368);
-		this.add.existing(slug_3);
-
-		// plant_2
-		const plant_2 = new Plant(this, 1616, 368);
-		this.add.existing(plant_2);
-
-		// bee_3
-		const bee_3 = new Bee(this, 1776, 144);
-		this.add.existing(bee_3);
-
-		// plant_3
-		const plant_3 = new Plant(this, 1600, 144);
-		this.add.existing(plant_3);
-		plant_3.flipX = true;
-		plant_3.flipY = false;
-
-		// slug_4
-		const slug_4 = new Slug(this, 1168, 368);
-		this.add.existing(slug_4);
-
-		// slug_5
-		const slug_5 = new Slug(this, 1328, 368);
-		this.add.existing(slug_5);
-
-		// slug_6
-		const slug_6 = new Slug(this, 2064, 192);
-		this.add.existing(slug_6);
-
-		// slug_7
-		const slug_7 = new Slug(this, 2112, 192);
-		this.add.existing(slug_7);
-
-		// bee_4
-		const bee_4 = new Bee(this, 2272, 144);
-		this.add.existing(bee_4);
 
 		// rock
 		const rock = this.add.image(256, 203.2, "atlas-props", "rock");
@@ -233,9 +154,6 @@ export default class Level extends Phaser.Scene {
 		const rock_2 = this.add.image(1464, 200, "atlas-props", "rock");
 		rock_2.setOrigin(0, 0);
 
-		// collisionsLayer
-		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 0, 0);
-
 		// carrot
 		const carrot = new Carrot(this, 936, 329.833333333333);
 		this.add.existing(carrot);
@@ -248,116 +166,271 @@ export default class Level extends Phaser.Scene {
 		const carrot_2 = new Carrot(this, 404.5, 67);
 		this.add.existing(carrot_2);
 
-		// star
-		const star = new Star(this, 160.5, 142.833333333333);
-		this.add.existing(star);
-
-		// star_1
-		const star_1 = new Star(this, 302.666666666667, 63);
-		this.add.existing(star_1);
-
-		// star_2
-		const star_2 = new Star(this, 272.666666666667, 63);
-		this.add.existing(star_2);
-
-		// star_3
-		const star_3 = new Star(this, 208, 143.166666666667);
-		this.add.existing(star_3);
-
-		// star_4
-		const star_4 = new Carrot(this, 1985.83333333333, 48.1666666666666);
-		this.add.existing(star_4);
-
-		// star_5
-		const star_5 = new Star(this, 242.666666666667, 63.1666666666667);
-		this.add.existing(star_5);
-
-		// star_6
-		const star_6 = new Star(this, 399.333333333333, 144.5);
-		this.add.existing(star_6);
-
-		// star_7
-		const star_7 = new Star(this, 428.666666666667, 143.833333333333);
-		this.add.existing(star_7);
-
-		// star_8
-		const star_8 = new Star(this, 653.333333333333, 79.8333333333334);
-		this.add.existing(star_8);
-
-		// star_9
-		const star_9 = new Star(this, 655.333333333333, 112.5);
-		this.add.existing(star_9);
-
-		// star_10
-		const star_10 = new Star(this, 1456, 257.833333333333);
-		this.add.existing(star_10);
-
-		// star_11
-		const star_11 = new Star(this, 1486, 257.166666666667);
-		this.add.existing(star_11);
-
-		// star_12
-		const star_12 = new Star(this, 1516.66666666667, 256.5);
-		this.add.existing(star_12);
+		// carrot_5
+		const carrot_5 = new Carrot(this, 1985.83333333333, 48.1666666666666);
+		this.add.existing(carrot_5);
 
 		// carrot_3
 		const carrot_3 = new Carrot(this, 1484.66666666667, 45.5);
 		this.add.existing(carrot_3);
 
+		// enemiesLayer
+		const enemiesLayer = this.add.layer();
+
+		// bee
+		const bee = new Bee(this, 528, 160);
+		enemiesLayer.add(bee);
+
+		// bee_1
+		const bee_1 = new Bee(this, 768, 160);
+		enemiesLayer.add(bee_1);
+
+		// bee_2
+		const bee_2 = new Bee(this, 960, 160);
+		enemiesLayer.add(bee_2);
+
+		// bee_3
+		const bee_3 = new Bee(this, 1776, 144);
+		enemiesLayer.add(bee_3);
+
+		// bee_4
+		const bee_4 = new Bee(this, 2272, 144);
+		enemiesLayer.add(bee_4);
+
+		// plant
+		const plant = new Plant(this, 672, 192);
+		enemiesLayer.add(plant);
+
+		// plant_1
+		const plant_1 = new Plant(this, 1024, 112);
+		enemiesLayer.add(plant_1);
+
+		// plant_2
+		const plant_2 = new Plant(this, 1616, 368);
+		enemiesLayer.add(plant_2);
+
+		// plant_3
+		const plant_3 = new Plant(this, 1600, 144);
+		plant_3.flipX = true;
+		plant_3.flipY = false;
+		enemiesLayer.add(plant_3);
+
+		// slug
+		const slug = new Slug(this, 192, 192);
+		enemiesLayer.add(slug);
+
+		// slug_1
+		const slug_1 = new Slug(this, 288, 208);
+		enemiesLayer.add(slug_1);
+
+		// slug_3
+		const slug_3 = new Slug(this, 1488, 352);
+		enemiesLayer.add(slug_3);
+
+		// slug_4
+		const slug_4 = new Slug(this, 1168, 368);
+		enemiesLayer.add(slug_4);
+
+		// slug_5
+		const slug_5 = new Slug(this, 1328, 352);
+		enemiesLayer.add(slug_5);
+
+		// slug_6
+		const slug_6 = new Slug(this, 2064, 176);
+		enemiesLayer.add(slug_6);
+
+		// slug_7
+		const slug_7 = new Slug(this, 2112, 176);
+		enemiesLayer.add(slug_7);
+
+		// slug_8
+		const slug_8 = new Slug(this, 288, 208);
+		enemiesLayer.add(slug_8);
+
+		// slug_9
+		const slug_9 = new Slug(this, 496, 32);
+		enemiesLayer.add(slug_9);
+
+		// slug_10
+		const slug_10 = new Slug(this, 1488, 368);
+		enemiesLayer.add(slug_10);
+
+		// slug_11
+		const slug_11 = new Slug(this, 1168, 368);
+		enemiesLayer.add(slug_11);
+
+		// slug_12
+		const slug_12 = new Slug(this, 1328, 368);
+		enemiesLayer.add(slug_12);
+
+		// slug_13
+		const slug_13 = new Slug(this, 2064, 192);
+		enemiesLayer.add(slug_13);
+
+		// slug_14
+		const slug_14 = new Slug(this, 2112, 192);
+		enemiesLayer.add(slug_14);
+
+		// chestLayer
+		const chestLayer = this.add.layer();
+
+		// chest
+		const chest = new Chest(this, 1136, 192);
+		chestLayer.add(chest);
+
+		// chest_1
+		const chest_1 = new Chest(this, 512, 384);
+		chestLayer.add(chest_1);
+
+		// lootLayer
+		const lootLayer = this.add.layer();
+
+		// starsLayer
+		const starsLayer = this.add.layer();
+
+		// star
+		const star = this.add.sprite(160.5, 142.8333282470703, "atlas", "star/star-1");
+		star.play("star");
+		starsLayer.add(star);
+
+		// star_1
+		const star_1 = this.add.sprite(302.6666564941406, 63, "atlas", "star/star-1");
+		star_1.play("star");
+		starsLayer.add(star_1);
+
+		// star_2
+		const star_2 = this.add.sprite(272.6666564941406, 63, "atlas", "star/star-1");
+		star_2.play("star");
+		starsLayer.add(star_2);
+
+		// star_3
+		const star_3 = this.add.sprite(208, 143.1666717529297, "atlas", "star/star-1");
+		star_3.play("star");
+		starsLayer.add(star_3);
+
+		// star_5
+		const star_5 = this.add.sprite(242.6666717529297, 63.16666793823242, "atlas", "star/star-1");
+		star_5.play("star");
+		starsLayer.add(star_5);
+
+		// star_6
+		const star_6 = this.add.sprite(399.3333435058594, 144.5, "atlas", "star/star-1");
+		star_6.play("star");
+		starsLayer.add(star_6);
+
+		// star_7
+		const star_7 = this.add.sprite(428.6666564941406, 143.8333282470703, "atlas", "star/star-1");
+		star_7.play("star");
+		starsLayer.add(star_7);
+
+		// star_8
+		const star_8 = this.add.sprite(653.3333129882812, 79.83333587646484, "atlas", "star/star-1");
+		star_8.play("star");
+		starsLayer.add(star_8);
+
+		// star_9
+		const star_9 = this.add.sprite(655.3333129882812, 112.5, "atlas", "star/star-1");
+		star_9.play("star");
+		starsLayer.add(star_9);
+
+		// star_10
+		const star_10 = this.add.sprite(1456, 257.8333435058594, "atlas", "star/star-1");
+		star_10.play("star");
+		starsLayer.add(star_10);
+
+		// star_11
+		const star_11 = this.add.sprite(1486, 257.1666564941406, "atlas", "star/star-1");
+		star_11.play("star");
+		starsLayer.add(star_11);
+
+		// star_12
+		const star_12 = this.add.sprite(1516.6666259765625, 256.5, "atlas", "star/star-1");
+		star_12.play("star");
+		starsLayer.add(star_12);
+
 		// star_13
-		const star_13 = new Star(this, 1664.66666666667, 285.833333333333);
-		this.add.existing(star_13);
+		const star_13 = this.add.sprite(1664.6666259765625, 285.8333435058594, "atlas", "star/star-1");
+		star_13.play("star");
+		starsLayer.add(star_13);
 
 		// star_14
-		const star_14 = new Star(this, 1183.33333333333, 309.166666666667);
-		this.add.existing(star_14);
+		const star_14 = this.add.sprite(1183.3333740234375, 309.1666564941406, "atlas", "star/star-1");
+		star_14.play("star");
+		starsLayer.add(star_14);
 
 		// star_15
-		const star_15 = new Star(this, 1272.66666666667, 311.166666666667);
-		this.add.existing(star_15);
+		const star_15 = this.add.sprite(1272.6666259765625, 311.1666564941406, "atlas", "star/star-1");
+		star_15.play("star");
+		starsLayer.add(star_15);
 
 		// star_16
-		const star_16 = new Star(this, 1367.33333333333, 309.833333333333);
-		this.add.existing(star_16);
+		const star_16 = this.add.sprite(1367.3333740234375, 309.8333435058594, "atlas", "star/star-1");
+		star_16.play("star");
+		starsLayer.add(star_16);
 
 		// star_17
-		const star_17 = new Star(this, 1632, 79.1666666666667);
-		this.add.existing(star_17);
+		const star_17 = this.add.sprite(1632, 79.16666412353516, "atlas", "star/star-1");
+		star_17.play("star");
+		starsLayer.add(star_17);
 
 		// star_18
-		const star_18 = new Star(this, 1664.66666666667, 79.1666666666667);
-		this.add.existing(star_18);
+		const star_18 = this.add.sprite(1664.6666259765625, 79.16666412353516, "atlas", "star/star-1");
+		star_18.play("star");
+		starsLayer.add(star_18);
 
 		// star_19
-		const star_19 = new Star(this, 1697.33333333333, 79.8333333333333);
-		this.add.existing(star_19);
+		const star_19 = this.add.sprite(1697.3333740234375, 79.83333587646484, "atlas", "star/star-1");
+		star_19.play("star");
+		starsLayer.add(star_19);
 
 		// star_20
-		const star_20 = new Star(this, 2082, 79.8333333333333);
-		this.add.existing(star_20);
+		const star_20 = this.add.sprite(2082, 79.83333587646484, "atlas", "star/star-1");
+		star_20.play("star");
+		starsLayer.add(star_20);
 
 		// star_21
-		const star_21 = new Star(this, 2145.33333333333, 79.8333333333333);
-		this.add.existing(star_21);
+		const star_21 = this.add.sprite(2145.333251953125, 79.83333587646484, "atlas", "star/star-1");
+		star_21.play("star");
+		starsLayer.add(star_21);
 
 		// star_22
-		const star_22 = new Star(this, 2210, 79.8333333333333);
-		this.add.existing(star_22);
+		const star_22 = this.add.sprite(2210, 79.83333587646484, "atlas", "star/star-1");
+		star_22.play("star");
+		starsLayer.add(star_22);
 
 		// star_23
-		const star_23 = new Star(this, 2322.66666666667, 191.833333333333);
-		this.add.existing(star_23);
+		const star_23 = this.add.sprite(2322.666748046875, 191.8333282470703, "atlas", "star/star-1");
+		star_23.play("star");
+		starsLayer.add(star_23);
 
 		// star_24
-		const star_24 = new Star(this, 2286.66666666667, 192.5);
-		this.add.existing(star_24);
+		const star_24 = this.add.sprite(2286.666748046875, 192.5, "atlas", "star/star-1");
+		star_24.play("star");
+		starsLayer.add(star_24);
 
 		// star_25
-		const star_25 = new Star(this, 2351.33333333333, 191.833333333333);
-		this.add.existing(star_25);
+		const star_25 = this.add.sprite(2351.333251953125, 191.8333282470703, "atlas", "star/star-1");
+		star_25.play("star");
+		starsLayer.add(star_25);
 
-		// playerVsCollisionLayer
-		this.physics.add.collider(player, collisionsLayer);
+		// collisionsLayer
+		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 0, 0);
+		collisionsLayer.visible = false;
+
+		// playerVsCollision
+		this.physics.add.collider(player, collisionsLayer, this.playerVsCollision, this.playerVsCollisionProcess, this);
+
+		// enemiesVsCollision
+		this.physics.add.collider(enemiesLayer.list, collisionsLayer);
+
+		// chestVsCollision
+		this.physics.add.collider(chestLayer.list, collisionsLayer);
+
+		// lootVsCollision
+		this.physics.add.collider(lootLayer.list, collisionsLayer);
+
+		// playerVsLadder
+		this.physics.add.overlap(player, collisionsLayer, this.playerVsLadder, (p, t) => t.index === 4, this);
 
 		// background (components)
 		new FixedToCameraComp(background);
@@ -385,6 +458,7 @@ export default class Level extends Phaser.Scene {
 		// bee_4 (prefab fields)
 		bee_4.distance = 30;
 
+		this.mainLayer = mainLayer;
 		this.player = player;
 		this.collisionsLayer = collisionsLayer;
 		this.levelMap = levelMap;
@@ -397,6 +471,8 @@ export default class Level extends Phaser.Scene {
 		this.events.emit("scene-awake");
 	}
 
+	/** @type {Phaser.Tilemaps.TilemapLayer} */
+	mainLayer;
 	/** @type {Player} */
 	player;
 	/** @type {Phaser.Tilemaps.TilemapLayer} */
@@ -422,10 +498,70 @@ export default class Level extends Phaser.Scene {
 
 		this.editorCreate();
 
-		this.levelMap.setCollision([1]);
+		// tilemap collisions
 
-		this.cameras.main.setBounds(0, 0, this.collisionsLayer.layer.widthInPixels, this.collisionsLayer.layer.heightInPixels);
+		this.collisionsLayer.setCollision([1, 3, 4, 5, 8]);
+
+		// set up collistion tiles
+		this.collisionsLayer.forEachTile(tile => {
+
+			if (tile.index === 2) {
+
+				tile.setCollision(false, false, true, false)
+			}
+		});
+
+		// camera
+		this.cameras.main.setBounds(0, 0, this.mainLayer.layer.widthInPixels, this.mainLayer.layer.heightInPixels);
 		this.cameras.main.startFollow(this.player, true);
+	}
+
+	/**
+	 * 
+	 * @param {Player} player 
+	 * @param {Phaser.Tilemaps.Tile} tile 
+	 */
+	playerVsLadder(player, tile) {
+
+		if (this.upKey.isDown) {
+
+			player.onLadder = true;
+		}
+	}
+
+	/**
+	 * 
+	 * @param {Player} player 
+	 * @param {Phaser.Tilemaps.Tile} tile 
+	 */
+	playerVsCollision(player, tile) {
+
+		switch (tile.index) {
+			case 5:
+				// kill zone
+				player.death();
+				break;
+			case 8:
+				// exit zone
+				// this.music.stop();
+				this.scene.start("GameOver");
+				break;
+		}
+	}
+
+	/**
+	 * 
+	 * @param {Player} player 
+	 * @param {Phaser.Tilemaps.Tile} tile 
+	 */
+	playerVsCollisionProcess(player, tile) {
+
+		if (!player.alive) {
+
+			return false;
+		}
+
+		return tile.index === 1 || tile.index === 2 || tile.index === 5;
 	}
 
 	movePlayer() {
@@ -446,7 +582,7 @@ export default class Level extends Phaser.Scene {
 
 		if (this.player.onLadder) {
 
-			player.play("player-climb");
+			this.player.play("player-climb");
 
 			let vel = 30;
 
@@ -552,6 +688,16 @@ export default class Level extends Phaser.Scene {
 	update() {
 
 		this.movePlayer();
+		this.deathReset();
+	}
+
+	deathReset() {
+
+		if (this.player.y > this.mainLayer.layer.heightInPixels) {
+			// player.reset();
+			 // this.music.stop();
+			 this.scene.start("GameOver");
+		 }
 	}
 
 	/* END-USER-CODE */

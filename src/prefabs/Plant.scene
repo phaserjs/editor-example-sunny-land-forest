@@ -23,6 +23,10 @@
             "x": 199,
             "y": 133.5,
             "originY": 1,
+            "ArcadeComponent.active": true,
+            "body.width": 60,
+            "body.height": 29,
+            "body.offset.y": 16,
             "animationPlayMethod": 1,
             "animationKey": "piranha-plant"
         }

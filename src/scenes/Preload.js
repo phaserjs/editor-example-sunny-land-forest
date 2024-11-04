@@ -57,8 +57,6 @@ export default class Preload extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
-	// Write your code here
-
 	preload() {
 
 		this.editorCreate();

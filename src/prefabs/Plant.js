@@ -1,6 +1,8 @@
 
 // You can write more code here
 
+import Player from "./Player.js";
+
 /* START OF COMPILED CODE */
 
 /* START-USER-IMPORTS */
@@ -12,6 +14,9 @@ export default class Plant extends Phaser.GameObjects.Sprite {
 		super(scene, x ?? 199, y ?? 133.5, texture || "atlas", frame ?? "piranha-plant/piranha-plant-1");
 
 		this.setOrigin(0.5, 1);
+		scene.physics.add.existing(this, false);
+		this.body.setOffset(0, 16);
+		this.body.setSize(60, 29, false);
 		this.play("piranha-plant");
 
 		/* START-USER-CTR-CODE */
@@ -21,7 +26,26 @@ export default class Plant extends Phaser.GameObjects.Sprite {
 
 	/* START-USER-CODE */
 
-	// Write your code here.
+	preUpdate(time, delta) {
+
+		super.preUpdate(time, delta);
+
+		/** @type {Player} */
+		const player = this.scene.player;
+
+		this.flipX = this.x < player.x;
+
+		const distance = Phaser.Math.Distance.BetweenPoints(this, player);
+
+		if (distance < 65) {
+
+			this.play("piranha-plant-attack");
+
+		} else {
+
+			this.play("piranha-plant");
+		}
+	}
 
 	/* END-USER-CODE */
 }

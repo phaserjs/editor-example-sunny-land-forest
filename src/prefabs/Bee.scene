@@ -22,6 +22,11 @@
             },
             "x": 161,
             "y": 101,
+            "ArcadeComponent.active": true,
+            "body.width": 15,
+            "body.height": 18,
+            "body.offset.x": 11,
+            "body.offset.y": 13,
             "animationPlayMethod": 1,
             "animationKey": "bee"
         }

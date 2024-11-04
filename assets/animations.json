@@ -53,7 +53,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 15,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
@@ -187,7 +187,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 10,
             "skipMissedFrames": true,
             "randomFrame": false
         },
@@ -226,7 +226,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 10,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
@@ -260,7 +260,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 12,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
@@ -294,7 +294,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 12,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
@@ -328,7 +328,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 12,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
@@ -350,7 +350,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 12,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
@@ -414,7 +414,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 12,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
@@ -448,7 +448,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 12,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
@@ -506,7 +506,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 12,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
@@ -540,7 +540,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 10,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false
@@ -586,7 +586,7 @@
                     "keyframe": false
                 }
             ],
-            "frameRate": 7,
+            "frameRate": 10,
             "skipMissedFrames": true,
             "repeat": -1,
             "randomFrame": false

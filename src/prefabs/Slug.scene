@@ -23,6 +23,13 @@
             "x": 156,
             "y": 99,
             "originY": 1,
+            "ArcadeComponent.active": true,
+            "body.gravity.y": 500,
+            "body.bounce.x": 1,
+            "body.width": 20,
+            "body.height": 11,
+            "body.offset.x": 7,
+            "body.offset.y": 10,
             "animationPlayMethod": 1,
             "animationKey": "slug"
         }

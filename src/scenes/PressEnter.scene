@@ -1,5 +1,5 @@
 {
-    "id": "3aff3233-9f2e-4d02-b14d-332c837dee17",
+    "id": "bb52d3a7-d4d3-4ffb-a87c-e50668a41623",
     "sceneType": "PREFAB",
     "settings": {
         "exportClass": true,
@@ -13,23 +13,14 @@
     },
     "displayList": [
         {
-            "type": "Sprite",
-            "id": "24a13d50-2659-42e6-b458-18a0b5254a8e",
-            "label": "chest",
+            "type": "Image",
+            "id": "7550c68e-ae68-4350-b58c-0c2c83068d57",
+            "label": "press_enter_text",
             "texture": {
-                "key": "atlas",
-                "frame": "chest/chest-1"
+                "key": "press-enter-text"
             },
-            "x": 184,
-            "y": 138.5,
-            "originY": 1,
-            "ArcadeComponent.active": true,
-            "body.width": 19,
-            "body.height": 12,
-            "body.offset.x": 9,
-            "body.offset.y": 13,
-            "animationPlayMethod": 1,
-            "animationKey": "chest"
+            "x": 163,
+            "y": 107
         }
     ],
     "plainObjects": [],
@@ -38,5 +29,17 @@
         "url": "https://phaser.io/editor",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 5
-    }
+    },
+    "prefabProperties": [
+        {
+            "name": "nextScene",
+            "label": "Next Scene",
+            "tooltip": "",
+            "defValue": "Level",
+            "customDefinition": false,
+            "type": {
+                "id": "scene-key"
+            }
+        }
+    ]
 }

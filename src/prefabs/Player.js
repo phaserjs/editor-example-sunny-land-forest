@@ -19,14 +19,20 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
 		/* START-USER-CTR-CODE */
 
+		this.initX = x;
+		this.initY = y;
+
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
 
+	initX = 0;
+	initY = 0;
+
 	alive = true;
 	health = 3;
-    onLadder = false;
+	onLadder = false;
 
 	preUpdate(time, delta) {
 
@@ -42,6 +48,28 @@ export default class Player extends Phaser.GameObjects.Sprite {
 		}
 
 		this.onLadder = false;
+	}
+
+	reset() {
+
+		this.x = this.initX;
+		this.y = this.initY;
+
+		this.body.velocity.y = 0;
+
+		this.health = 3;
+		this.alive = true;
+		this.hurtFlag = false;
+
+		this.play("player-idle");
+	}
+
+	death() {
+
+		this.alive = false;
+
+		this.body.velocity.x = 0;
+		this.body.velocity.y = -400;
 	}
 
 	/* END-USER-CODE */

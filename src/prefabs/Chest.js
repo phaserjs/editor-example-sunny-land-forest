@@ -12,6 +12,9 @@ export default class Chest extends Phaser.GameObjects.Sprite {
 		super(scene, x ?? 184, y ?? 138.5, texture || "atlas", frame ?? "chest/chest-1");
 
 		this.setOrigin(0.5, 1);
+		scene.physics.add.existing(this, false);
+		this.body.setOffset(9, 13);
+		this.body.setSize(19, 12, false);
 		this.play("chest");
 
 		/* START-USER-CTR-CODE */
@@ -21,7 +24,23 @@ export default class Chest extends Phaser.GameObjects.Sprite {
 
 	/* START-USER-CODE */
 
-	// Write your code here.
+	opened = false;
+
+	open() {
+
+		this.opened = true;
+		this.play("chest");
+
+		// // TODO
+		// for (var i = 0; i <= 5; i++) {
+
+		// 	var temp = new Star(game, this.x, this.y - 15);
+
+		// 	game.add.existing(temp);
+
+		// 	loot_group.add(temp);
+		// }
+	}
 
 	/* END-USER-CODE */
 }
