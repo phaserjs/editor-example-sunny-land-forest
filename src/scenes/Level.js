@@ -12,6 +12,7 @@ import Plant from "../prefabs/Plant.js";
 import Slug from "../prefabs/Slug.js";
 import Chest from "../prefabs/Chest.js";
 /* START-USER-IMPORTS */
+import EnemyDeath from "../prefabs/EnemyDeath.js";
 /* END-USER-IMPORTS */
 
 export default class Level extends Phaser.Scene {
@@ -28,7 +29,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_ffa10ad2-bd5e-49f8-a618-b5f8afc2b5e3", {
+		this.cache.tilemap.add("levelMap_10074d7b-a767-45d0-aad9-55161664b496", {
 			format: 1,
 			data: {
 				width: 24,
@@ -84,7 +85,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_ffa10ad2-bd5e-49f8-a618-b5f8afc2b5e3");
+		const levelMap = this.add.tilemap("levelMap_10074d7b-a767-45d0-aad9-55161664b496");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -202,19 +203,19 @@ export default class Level extends Phaser.Scene {
 		enemiesLayer.add(bee_4);
 
 		// plant
-		const plant = new Plant(this, 672, 192);
+		const plant = new Plant(this, 672, 166);
 		enemiesLayer.add(plant);
 
 		// plant_1
-		const plant_1 = new Plant(this, 1024, 112);
+		const plant_1 = new Plant(this, 1024, 89);
 		enemiesLayer.add(plant_1);
 
 		// plant_2
-		const plant_2 = new Plant(this, 1616, 368);
+		const plant_2 = new Plant(this, 1616, 344);
 		enemiesLayer.add(plant_2);
 
 		// plant_3
-		const plant_3 = new Plant(this, 1600, 144);
+		const plant_3 = new Plant(this, 1600, 122);
 		plant_3.flipX = true;
 		plant_3.flipY = false;
 		enemiesLayer.add(plant_3);
@@ -227,29 +228,9 @@ export default class Level extends Phaser.Scene {
 		const slug_1 = new Slug(this, 288, 208);
 		enemiesLayer.add(slug_1);
 
-		// slug_3
-		const slug_3 = new Slug(this, 1488, 352);
-		enemiesLayer.add(slug_3);
-
 		// slug_4
 		const slug_4 = new Slug(this, 1168, 368);
 		enemiesLayer.add(slug_4);
-
-		// slug_5
-		const slug_5 = new Slug(this, 1328, 352);
-		enemiesLayer.add(slug_5);
-
-		// slug_6
-		const slug_6 = new Slug(this, 2064, 176);
-		enemiesLayer.add(slug_6);
-
-		// slug_7
-		const slug_7 = new Slug(this, 2112, 176);
-		enemiesLayer.add(slug_7);
-
-		// slug_8
-		const slug_8 = new Slug(this, 288, 208);
-		enemiesLayer.add(slug_8);
 
 		// slug_9
 		const slug_9 = new Slug(this, 496, 32);
@@ -259,12 +240,8 @@ export default class Level extends Phaser.Scene {
 		const slug_10 = new Slug(this, 1488, 368);
 		enemiesLayer.add(slug_10);
 
-		// slug_11
-		const slug_11 = new Slug(this, 1168, 368);
-		enemiesLayer.add(slug_11);
-
 		// slug_12
-		const slug_12 = new Slug(this, 1328, 368);
+		const slug_12 = new Slug(this, 1328, 369);
 		enemiesLayer.add(slug_12);
 
 		// slug_13
@@ -436,6 +413,9 @@ export default class Level extends Phaser.Scene {
 		// playerVsLadder
 		this.physics.add.overlap(player, collisionsLayer, this.playerVsLadder, (p, t) => t.index === 4, this);
 
+		// playerVsEnemies
+		this.physics.add.overlap(player, enemiesLayer.list, this.playerVsEnemies, undefined, this);
+
 		// background (components)
 		new FixedToCameraComp(background);
 		const backgroundParallaxComp = new ParallaxComp(background);
@@ -568,6 +548,65 @@ export default class Level extends Phaser.Scene {
 		return tile.index === 1 || tile.index === 2 || tile.index === 5;
 	}
 
+	/**
+	 * 
+	 * @param {Player} player 
+	 * @param {Phaser.GameObjects.Sprite} enemy 
+	 */
+	playerVsEnemies(player, enemy) {
+
+        if ((player.y + player.body.height * 0.5 < enemy.y) && player.body.velocity.y > 0) {
+
+			enemy.destroy();
+			//this.audioEnemyDeath.play();
+            this.spawnEnemyDeath(enemy.x, enemy.y);
+
+            player.body.velocity.y = -300;
+
+        } else {
+
+            this.hurtPlayer();
+        }
+    }
+
+	hurtPlayer() {
+
+        if (this.player.hurtFlag) {
+
+			return;
+        }
+
+        this.player.hurtFlag = true;
+
+        this.player.play("player-hurt");
+        this.player.y -= 5;
+
+        this.player.body.velocity.y = -150;
+        this.player.body.velocity.x = this.player.flipX ? -22 : 22;
+        this.player.health--;
+
+        // this.audioHurt.play();
+
+        if (this.player.health < 1) {
+
+            this.player.death();
+
+        } else {
+
+			this.time.delayedCall(1000, () => {
+
+				this.player.hurtFlag = false;
+			});
+		}
+    }
+
+	spawnEnemyDeath(x, y) {
+
+        const temp = new EnemyDeath(this, x, y);
+
+        this.add.existing(temp);
+    }
+
 	movePlayer() {
 
 		if (!this.player.alive) {
@@ -699,9 +738,9 @@ export default class Level extends Phaser.Scene {
 
 		if (this.player.y > this.mainLayer.layer.heightInPixels) {
 			// player.reset();
-			 // this.music.stop();
-			 this.scene.start("GameOver");
-		 }
+			// this.music.stop();
+			this.scene.start("GameOver");
+		}
 	}
 
 	/* END-USER-CODE */

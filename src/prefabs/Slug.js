@@ -34,7 +34,6 @@ export default class Slug extends Phaser.GameObjects.Sprite {
 
 		this.flipX = this.body.velocity.x > 0;
 	}
-
 	/* END-USER-CODE */
 }
 

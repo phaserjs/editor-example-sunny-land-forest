@@ -13,7 +13,6 @@ export default class Plant extends Phaser.GameObjects.Sprite {
 	constructor(scene, x, y, texture, frame) {
 		super(scene, x ?? 199, y ?? 133.5, texture || "atlas", frame ?? "piranha-plant/piranha-plant-1");
 
-		this.setOrigin(0.5, 1);
 		scene.physics.add.existing(this, false);
 		this.body.setOffset(0, 16);
 		this.body.setSize(60, 29, false);
