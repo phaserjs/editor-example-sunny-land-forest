@@ -62,8 +62,8 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "x": 131,
-            "y": 167
+            "x": 435,
+            "y": 151
         },
         {
             "type": "Image",
@@ -262,13 +262,15 @@
                         "x",
                         "y",
                         "distance",
-                        "horizontal"
+                        "horizontal",
+                        "visible"
                     ],
                     "label": "bee_1",
                     "distance": 30,
                     "horizontal": true,
                     "x": 768,
-                    "y": 160
+                    "y": 160,
+                    "visible": false
                 },
                 {
                     "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
@@ -276,12 +278,14 @@
                     "unlock": [
                         "x",
                         "y",
-                        "distance"
+                        "distance",
+                        "visible"
                     ],
                     "label": "bee_2",
                     "distance": 30,
                     "x": 960,
-                    "y": 160
+                    "y": 160,
+                    "visible": false
                 },
                 {
                     "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
@@ -290,13 +294,15 @@
                         "x",
                         "y",
                         "horizontal",
-                        "distance"
+                        "distance",
+                        "visible"
                     ],
                     "label": "bee_3",
                     "distance": 30,
                     "horizontal": true,
                     "x": 1776,
-                    "y": 144
+                    "y": 144,
+                    "visible": false
                 },
                 {
                     "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
@@ -304,12 +310,14 @@
                     "unlock": [
                         "x",
                         "y",
-                        "distance"
+                        "distance",
+                        "visible"
                     ],
                     "label": "bee_4",
                     "distance": 30,
                     "x": 2272,
-                    "y": 144
+                    "y": 144,
+                    "visible": false
                 },
                 {
                     "prefabId": "3d1a44de-031d-4659-8aea-bca62d81360b",

@@ -31,13 +31,16 @@ export default class Bee extends Phaser.GameObjects.Sprite {
 				this.body.velocity.y = this.speed;
 			}
 		});
+
+		this.initX = x;
+		this.initY = y;
 		/* END-USER-CTR-CODE */
 	}
 
-	/** @type {number} */
 	distance = 0;
-	/** @type {boolean} */
 	horizontal = false;
+	initX = 0;
+	initY = 0;
 
 	/* START-USER-CODE */
 
@@ -58,6 +61,10 @@ export default class Bee extends Phaser.GameObjects.Sprite {
 	}
 
 	verticalMove() {
+
+		if (!this.visible) {
+			return;
+		}
 
 		if (this.body.velocity.y > 0 && this.y > this.initY + this.distance) {
 
