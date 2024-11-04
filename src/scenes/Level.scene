@@ -97,8 +97,8 @@
                     "distance": 30,
                     "horizontal": true,
                     "x": 768,
-                    "y": 160,
-                    "visible": false
+                    "y": 159,
+                    "visible": true
                 },
                 {
                     "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
@@ -113,7 +113,7 @@
                     "distance": 30,
                     "x": 960,
                     "y": 160,
-                    "visible": false
+                    "visible": true
                 },
                 {
                     "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
@@ -130,7 +130,7 @@
                     "horizontal": true,
                     "x": 1776,
                     "y": 144,
-                    "visible": false
+                    "visible": true
                 },
                 {
                     "prefabId": "d154bf6f-b260-4a2b-8bf8-c0763c997672",
@@ -145,7 +145,7 @@
                     "distance": 30,
                     "x": 2272,
                     "y": 144,
-                    "visible": false
+                    "visible": true
                 },
                 {
                     "prefabId": "3d1a44de-031d-4659-8aea-bca62d81360b",
@@ -326,329 +326,279 @@
             "label": "starsLayer",
             "list": [
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "df80877c-6a67-429f-b691-c40b3bcb24a6",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 160.5,
-                    "y": 142.8333282470703,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 142.8333282470703
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "1e72048c-9a08-4de2-b6ba-c7b13755177a",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_1",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 302.6666564941406,
-                    "y": 63,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 63
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "9e9795fe-5042-4a2a-b761-1b25983975d0",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_2",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 272.6666564941406,
-                    "y": 63,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 63
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "9f234332-febb-4bff-ab74-d87f434c8782",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_3",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 208,
-                    "y": 143.1666717529297,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 143.1666717529297
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "7e2e1895-6e0d-4679-ad49-488c32df4c73",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_5",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 242.6666717529297,
-                    "y": 63.16666793823242,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 63.16666793823242
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "d1638a3f-6d84-4090-a3b3-2e7caf0ddb3c",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_6",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 399.3333435058594,
-                    "y": 144.5,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 144.5
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "add0fd0a-baaa-4e9a-9ac6-4f7ac9da9454",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_7",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 428.6666564941406,
-                    "y": 143.8333282470703,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 143.8333282470703
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "f5185cbd-ee99-4e8b-8f7d-9e29e2fc12a7",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_8",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 653.3333129882812,
-                    "y": 79.83333587646484,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 79.83333587646484
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "e31197d8-22ad-4cc5-8127-1c50ba5981cd",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_9",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 655.3333129882812,
-                    "y": 112.5,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 112.5
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "1b856783-0287-4ae7-8ea9-1343f847bbb9",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_10",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 1456,
-                    "y": 257.8333435058594,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 257.8333435058594
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "1b2000f7-7c87-4c3f-95ad-2ae2f5f6affd",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_11",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 1486,
-                    "y": 257.1666564941406,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 257.1666564941406
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "024c5d34-5a47-4163-a81f-6f95313dd529",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_12",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 1516.6666259765625,
-                    "y": 256.5,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 256.5
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "a5c080e4-19c6-4746-90ae-44d6da663473",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_13",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 1664.6666259765625,
-                    "y": 285.8333435058594,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 285.8333435058594
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "78520ae3-2c5c-47a1-9ae3-c7ce41c8b38b",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_14",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 1183.3333740234375,
-                    "y": 309.1666564941406,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 309.1666564941406
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "c4bda961-4d5a-438e-ac33-d32368ac40c8",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_15",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 1272.6666259765625,
-                    "y": 311.1666564941406,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 311.1666564941406
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "f2ec4233-95ae-4293-a069-447a5ec87d24",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_16",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 1367.3333740234375,
-                    "y": 309.8333435058594,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 309.8333435058594
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "4289f1f1-6b4e-4bbd-9211-0bc40dc87aa0",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_17",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 1632,
-                    "y": 79.16666412353516,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 79.16666412353516
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "e327b219-8c6a-4f17-8955-4275365f68d8",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_18",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 1664.6666259765625,
-                    "y": 79.16666412353516,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 79.16666412353516
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "62384a47-b9c5-4029-91d9-cb8a7dffd718",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_19",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 1697.3333740234375,
-                    "y": 79.83333587646484,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 79.83333587646484
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "daa5c33e-d92f-4b5d-9c40-3b7783bd2cf2",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_20",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 2082,
-                    "y": 79.83333587646484,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 79.83333587646484
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "1a91d789-7d98-441e-a29b-b6235f97f255",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_21",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 2145.333251953125,
-                    "y": 79.83333587646484,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 79.83333587646484
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "2e62b285-3452-47a6-b8de-ae4db77719ce",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_22",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 2210,
-                    "y": 79.83333587646484,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 79.83333587646484
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "67e4bdf2-0c5c-4967-88d5-2909626c4aae",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_23",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 2322.666748046875,
-                    "y": 191.8333282470703,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 191.8333282470703
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "84c3da6e-12d5-45d4-a89b-4da433eaa305",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_24",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 2286.666748046875,
-                    "y": 192.5,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 192.5
                 },
                 {
-                    "type": "Sprite",
+                    "prefabId": "19602c98-5d7d-4665-a840-58f97483d047",
                     "id": "b1c38582-7176-4be0-ac19-5149dbf3fc39",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
                     "label": "star_25",
-                    "texture": {
-                        "key": "atlas",
-                        "frame": "star/star-1"
-                    },
                     "x": 2351.333251953125,
-                    "y": 191.8333282470703,
-                    "animationPlayMethod": 1,
-                    "animationKey": "star"
+                    "y": 191.8333282470703
                 }
             ]
         },
@@ -845,6 +795,27 @@
             "scope": "CLASS",
             "visible": false,
             "tilemapId": "adbad958-e0fa-4083-a2bc-454b442abaf7"
+        },
+        {
+            "type": "Container",
+            "id": "587a0ed6-c29d-4c48-81c1-1735f751834b",
+            "label": "hud",
+            "components": [
+                "FixedToCameraComp"
+            ],
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "e56ae4af-cc30-4f92-b0ff-e27909ea2959",
+                    "label": "scoreLabel",
+                    "scope": "CLASS",
+                    "x": 57,
+                    "y": 11,
+                    "text": "0",
+                    "fontFamily": "VT323",
+                    "fontSize": "8px"
+                }
+            ]
         }
     ],
     "plainObjects": [
@@ -991,6 +962,17 @@
             "object2": "carrotsLayer.list",
             "overlapOnly": true,
             "collideCallback": "this.playerVsCarrots",
+            "callbackContext": "this"
+        },
+        {
+            "id": "4bc6a3db-a80a-44cf-b942-6ad0fb4999c5",
+            "type": "Collider",
+            "label": "playerVsStar",
+            "scope": "LOCAL",
+            "object1": "player",
+            "object2": "starsLayer.list",
+            "overlapOnly": true,
+            "collideCallback": "this.playerVsStar",
             "callbackContext": "this"
         }
     ],

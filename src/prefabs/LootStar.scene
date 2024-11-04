@@ -1,5 +1,5 @@
 {
-    "id": "19602c98-5d7d-4665-a840-58f97483d047",
+    "id": "08a8da85-acb7-418a-8f4f-759e5e7ae83e",
     "sceneType": "PREFAB",
     "settings": {
         "exportClass": true,
@@ -13,18 +13,25 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "ffad7cf4-a756-45f8-aa67-23434ad3f3bf",
-            "label": "star_star_1",
+            "type": "Sprite",
+            "id": "3977a8cb-49a5-440c-8473-edc1c5feb3e1",
+            "label": "star",
             "texture": {
                 "key": "atlas",
                 "frame": "star/star-1"
             },
-            "x": 149,
-            "y": 94,
+            "x": 150,
+            "y": 97,
             "ArcadeComponent.active": true,
+            "body.gravity.y": 500,
+            "body.drag.x": 10,
+            "body.drag.y": 10,
+            "body.bounce.x": 0.8,
+            "body.bounce.y": 0.8,
             "body.width": 13,
-            "body.height": 13
+            "body.height": 13,
+            "animationPlayMethod": 1,
+            "animationKey": "star"
         }
     ],
     "plainObjects": [],

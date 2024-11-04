@@ -24,6 +24,20 @@
                 "key": "background"
             },
             {
+                "url": [
+                    "assets/sound/carrot.mp3"
+                ],
+                "type": "audio",
+                "key": "carrot"
+            },
+            {
+                "url": [
+                    "assets/sound/chest.mp3"
+                ],
+                "type": "audio",
+                "key": "chest"
+            },
+            {
                 "url": "assets/environment/collisions.png",
                 "frameConfig": {
                     "frameWidth": 16,
@@ -47,6 +61,20 @@
                 "type": "image"
             },
             {
+                "url": [
+                    "assets/sound/enchanted_forest.mp3"
+                ],
+                "type": "audio",
+                "key": "music"
+            },
+            {
+                "url": [
+                    "assets/sound/enemy-death.mp3"
+                ],
+                "type": "audio",
+                "key": "enemy-death"
+            },
+            {
                 "url": "assets/sprites/game-over.png",
                 "type": "image",
                 "key": "game-over"
@@ -65,9 +93,23 @@
                 "key": "hud"
             },
             {
+                "url": [
+                    "assets/sound/hurt.mp3"
+                ],
+                "type": "audio",
+                "key": "hurt"
+            },
+            {
                 "url": "assets/sprites/instructions.png",
                 "type": "image",
                 "key": "instructions"
+            },
+            {
+                "url": [
+                    "assets/sound/jump.mp3"
+                ],
+                "type": "audio",
+                "key": "jump"
             },
             {
                 "url": "assets/sprites/loading.png",
@@ -83,6 +125,13 @@
                 "url": "assets/sprites/press-enter-text.png",
                 "type": "image",
                 "key": "press-enter-text"
+            },
+            {
+                "url": [
+                    "assets/sound/star.mp3"
+                ],
+                "type": "audio",
+                "key": "star"
             },
             {
                 "url": "assets/environment/tileset.png",

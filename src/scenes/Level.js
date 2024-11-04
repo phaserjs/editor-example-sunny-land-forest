@@ -10,6 +10,7 @@ import Bee from "../prefabs/Bee.js";
 import Plant from "../prefabs/Plant.js";
 import Slug from "../prefabs/Slug.js";
 import Chest from "../prefabs/Chest.js";
+import Star from "../prefabs/Star.js";
 import Carrot from "../prefabs/Carrot.js";
 /* START-USER-IMPORTS */
 import EnemyDeath from "../prefabs/EnemyDeath.js";
@@ -29,7 +30,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_09df912c-4158-4938-985b-ce2adaf6d027", {
+		this.cache.tilemap.add("levelMap_10b6a652-6b96-400d-865d-540a43edc22f", {
 			format: 1,
 			data: {
 				width: 24,
@@ -85,7 +86,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_09df912c-4158-4938-985b-ce2adaf6d027");
+		const levelMap = this.add.tilemap("levelMap_10b6a652-6b96-400d-865d-540a43edc22f");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
@@ -127,23 +128,23 @@ export default class Level extends Phaser.Scene {
 		enemiesLayer.add(bee);
 
 		// bee_1
-		const bee_1 = new Bee(this, 768, 160);
-		bee_1.visible = false;
+		const bee_1 = new Bee(this, 768, 159);
+		bee_1.visible = true;
 		enemiesLayer.add(bee_1);
 
 		// bee_2
 		const bee_2 = new Bee(this, 960, 160);
-		bee_2.visible = false;
+		bee_2.visible = true;
 		enemiesLayer.add(bee_2);
 
 		// bee_3
 		const bee_3 = new Bee(this, 1776, 144);
-		bee_3.visible = false;
+		bee_3.visible = true;
 		enemiesLayer.add(bee_3);
 
 		// bee_4
 		const bee_4 = new Bee(this, 2272, 144);
-		bee_4.visible = false;
+		bee_4.visible = true;
 		enemiesLayer.add(bee_4);
 
 		// plant
@@ -214,128 +215,103 @@ export default class Level extends Phaser.Scene {
 		const starsLayer = this.add.layer();
 
 		// star
-		const star = this.add.sprite(160.5, 142.8333282470703, "atlas", "star/star-1");
-		star.play("star");
+		const star = new Star(this, 160.5, 142.8333282470703);
 		starsLayer.add(star);
 
 		// star_1
-		const star_1 = this.add.sprite(302.6666564941406, 63, "atlas", "star/star-1");
-		star_1.play("star");
+		const star_1 = new Star(this, 302.6666564941406, 63);
 		starsLayer.add(star_1);
 
 		// star_2
-		const star_2 = this.add.sprite(272.6666564941406, 63, "atlas", "star/star-1");
-		star_2.play("star");
+		const star_2 = new Star(this, 272.6666564941406, 63);
 		starsLayer.add(star_2);
 
 		// star_3
-		const star_3 = this.add.sprite(208, 143.1666717529297, "atlas", "star/star-1");
-		star_3.play("star");
+		const star_3 = new Star(this, 208, 143.1666717529297);
 		starsLayer.add(star_3);
 
 		// star_5
-		const star_5 = this.add.sprite(242.6666717529297, 63.16666793823242, "atlas", "star/star-1");
-		star_5.play("star");
+		const star_5 = new Star(this, 242.6666717529297, 63.16666793823242);
 		starsLayer.add(star_5);
 
 		// star_6
-		const star_6 = this.add.sprite(399.3333435058594, 144.5, "atlas", "star/star-1");
-		star_6.play("star");
+		const star_6 = new Star(this, 399.3333435058594, 144.5);
 		starsLayer.add(star_6);
 
 		// star_7
-		const star_7 = this.add.sprite(428.6666564941406, 143.8333282470703, "atlas", "star/star-1");
-		star_7.play("star");
+		const star_7 = new Star(this, 428.6666564941406, 143.8333282470703);
 		starsLayer.add(star_7);
 
 		// star_8
-		const star_8 = this.add.sprite(653.3333129882812, 79.83333587646484, "atlas", "star/star-1");
-		star_8.play("star");
+		const star_8 = new Star(this, 653.3333129882812, 79.83333587646484);
 		starsLayer.add(star_8);
 
 		// star_9
-		const star_9 = this.add.sprite(655.3333129882812, 112.5, "atlas", "star/star-1");
-		star_9.play("star");
+		const star_9 = new Star(this, 655.3333129882812, 112.5);
 		starsLayer.add(star_9);
 
 		// star_10
-		const star_10 = this.add.sprite(1456, 257.8333435058594, "atlas", "star/star-1");
-		star_10.play("star");
+		const star_10 = new Star(this, 1456, 257.8333435058594);
 		starsLayer.add(star_10);
 
 		// star_11
-		const star_11 = this.add.sprite(1486, 257.1666564941406, "atlas", "star/star-1");
-		star_11.play("star");
+		const star_11 = new Star(this, 1486, 257.1666564941406);
 		starsLayer.add(star_11);
 
 		// star_12
-		const star_12 = this.add.sprite(1516.6666259765625, 256.5, "atlas", "star/star-1");
-		star_12.play("star");
+		const star_12 = new Star(this, 1516.6666259765625, 256.5);
 		starsLayer.add(star_12);
 
 		// star_13
-		const star_13 = this.add.sprite(1664.6666259765625, 285.8333435058594, "atlas", "star/star-1");
-		star_13.play("star");
+		const star_13 = new Star(this, 1664.6666259765625, 285.8333435058594);
 		starsLayer.add(star_13);
 
 		// star_14
-		const star_14 = this.add.sprite(1183.3333740234375, 309.1666564941406, "atlas", "star/star-1");
-		star_14.play("star");
+		const star_14 = new Star(this, 1183.3333740234375, 309.1666564941406);
 		starsLayer.add(star_14);
 
 		// star_15
-		const star_15 = this.add.sprite(1272.6666259765625, 311.1666564941406, "atlas", "star/star-1");
-		star_15.play("star");
+		const star_15 = new Star(this, 1272.6666259765625, 311.1666564941406);
 		starsLayer.add(star_15);
 
 		// star_16
-		const star_16 = this.add.sprite(1367.3333740234375, 309.8333435058594, "atlas", "star/star-1");
-		star_16.play("star");
+		const star_16 = new Star(this, 1367.3333740234375, 309.8333435058594);
 		starsLayer.add(star_16);
 
 		// star_17
-		const star_17 = this.add.sprite(1632, 79.16666412353516, "atlas", "star/star-1");
-		star_17.play("star");
+		const star_17 = new Star(this, 1632, 79.16666412353516);
 		starsLayer.add(star_17);
 
 		// star_18
-		const star_18 = this.add.sprite(1664.6666259765625, 79.16666412353516, "atlas", "star/star-1");
-		star_18.play("star");
+		const star_18 = new Star(this, 1664.6666259765625, 79.16666412353516);
 		starsLayer.add(star_18);
 
 		// star_19
-		const star_19 = this.add.sprite(1697.3333740234375, 79.83333587646484, "atlas", "star/star-1");
-		star_19.play("star");
+		const star_19 = new Star(this, 1697.3333740234375, 79.83333587646484);
 		starsLayer.add(star_19);
 
 		// star_20
-		const star_20 = this.add.sprite(2082, 79.83333587646484, "atlas", "star/star-1");
-		star_20.play("star");
+		const star_20 = new Star(this, 2082, 79.83333587646484);
 		starsLayer.add(star_20);
 
 		// star_21
-		const star_21 = this.add.sprite(2145.333251953125, 79.83333587646484, "atlas", "star/star-1");
-		star_21.play("star");
+		const star_21 = new Star(this, 2145.333251953125, 79.83333587646484);
 		starsLayer.add(star_21);
 
 		// star_22
-		const star_22 = this.add.sprite(2210, 79.83333587646484, "atlas", "star/star-1");
-		star_22.play("star");
+		const star_22 = new Star(this, 2210, 79.83333587646484);
 		starsLayer.add(star_22);
 
 		// star_23
-		const star_23 = this.add.sprite(2322.666748046875, 191.8333282470703, "atlas", "star/star-1");
-		star_23.play("star");
+		const star_23 = new Star(this, 2322.666748046875, 191.8333282470703);
 		starsLayer.add(star_23);
 
 		// star_24
-		const star_24 = this.add.sprite(2286.666748046875, 192.5, "atlas", "star/star-1");
-		star_24.play("star");
+		const star_24 = new Star(this, 2286.666748046875, 192.5);
 		starsLayer.add(star_24);
 
 		// star_25
-		const star_25 = this.add.sprite(2351.333251953125, 191.8333282470703, "atlas", "star/star-1");
-		star_25.play("star");
+		const star_25 = new Star(this, 2351.333251953125, 191.8333282470703);
 		starsLayer.add(star_25);
 
 		// carrotsLayer
@@ -413,6 +389,15 @@ export default class Level extends Phaser.Scene {
 		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 0, 0);
 		collisionsLayer.visible = false;
 
+		// hud
+		const hud = this.add.container(0, 0);
+
+		// scoreLabel
+		const scoreLabel = this.add.text(57, 11, "", {});
+		scoreLabel.text = "0";
+		scoreLabel.setStyle({ "fontFamily": "VT323", "fontSize": "8px" });
+		hud.add(scoreLabel);
+
 		// playerVsCollision
 		this.physics.add.collider(player, collisionsLayer, this.playerVsCollision, this.playerVsCollisionProcess, this);
 
@@ -433,6 +418,9 @@ export default class Level extends Phaser.Scene {
 
 		// collider
 		this.physics.add.overlap(player, carrotsLayer.list, this.playerVsCarrots, undefined, this);
+
+		// playerVsStar
+		this.physics.add.overlap(player, starsLayer.list, this.playerVsStar, undefined, this);
 
 		// background (components)
 		new FixedToCameraComp(background);
@@ -460,9 +448,13 @@ export default class Level extends Phaser.Scene {
 		// bee_4 (prefab fields)
 		bee_4.distance = 30;
 
+		// hud (components)
+		new FixedToCameraComp(hud);
+
 		this.mainLayer = mainLayer;
 		this.player = player;
 		this.collisionsLayer = collisionsLayer;
+		this.scoreLabel = scoreLabel;
 		this.levelMap = levelMap;
 		this.jumpKey = jumpKey;
 		this.leftKey = leftKey;
@@ -479,6 +471,8 @@ export default class Level extends Phaser.Scene {
 	player;
 	/** @type {Phaser.Tilemaps.TilemapLayer} */
 	collisionsLayer;
+	/** @type {Phaser.GameObjects.Text} */
+	scoreLabel;
 	/** @type {Phaser.Tilemaps.Tilemap} */
 	levelMap;
 	/** @type {Phaser.Input.Keyboard.Key} */
@@ -494,11 +488,13 @@ export default class Level extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
-	hurtFlag = false;
+	_score = 0;
 
 	create() {
 
 		this.editorCreate();
+
+		this._score = 0;
 
 		// tilemap collisions
 
@@ -569,13 +565,32 @@ export default class Level extends Phaser.Scene {
 	/**
 	 * 
 	 * @param {Player} player 
+	 * @param {Phaser.GameObjects.Sprite} star 
+	 */
+	playerVsStar(player, star) {
+
+		this.increaseScore();
+
+		star.destroy();
+
+		this.sound.play("star");
+	}
+
+	increaseScore() {
+
+		this._score++;
+
+        this.scoreLabel.text = this._score;
+    }
+
+	/**
+	 * 
+	 * @param {Player} player 
 	 * @param {Carrot} carrot 
 	 */
 	playerVsCarrots(player, carrot) {
 
 		carrot.destroy();
-
-		// this.audioCarrot.play();
 
         player.health++;
 
@@ -583,6 +598,8 @@ export default class Level extends Phaser.Scene {
 
             player.health = 3;
         }
+
+		this.sound.play("carrot");
 	}
 
 	/**
@@ -595,10 +612,12 @@ export default class Level extends Phaser.Scene {
         if ((player.y + player.body.height * 0.5 < enemy.y) && player.body.velocity.y > 0) {
 
 			enemy.destroy();
-			//this.audioEnemyDeath.play();
+
             this.spawnEnemyDeath(enemy.x, enemy.y);
 
             player.body.velocity.y = -300;
+
+			this.sound.play("enemy-death");
 
         } else {
 
@@ -622,7 +641,7 @@ export default class Level extends Phaser.Scene {
         this.player.body.velocity.x = this.player.flipX ? -22 : 22;
         this.player.health--;
 
-        // this.audioHurt.play();
+		this.sound.play("hurt");
 
         if (this.player.health < 1) {
 
@@ -700,7 +719,7 @@ export default class Level extends Phaser.Scene {
 
 			this.player.body.velocity.y = -200;
 
-			// this.audioJump.play();
+			this.sound.play("jump");
 		}
 
 		let vel = 100;
