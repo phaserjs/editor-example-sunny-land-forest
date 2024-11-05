@@ -32,7 +32,7 @@ export default class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// levelMap
-		this.cache.tilemap.add("levelMap_2ae3c2f7-af90-4f64-8cc5-abb9f0ed4e07", {
+		this.cache.tilemap.add("levelMap_adbad958-e0fa-4083-a2bc-454b442abaf7", {
 			format: 1,
 			data: {
 				width: 24,
@@ -88,7 +88,7 @@ export default class Level extends Phaser.Scene {
 				],
 			},
 		});
-		const levelMap = this.add.tilemap("levelMap_2ae3c2f7-af90-4f64-8cc5-abb9f0ed4e07");
+		const levelMap = this.add.tilemap("levelMap_adbad958-e0fa-4083-a2bc-454b442abaf7");
 		levelMap.addTilesetImage("collisions");
 		levelMap.addTilesetImage("tileset");
 
