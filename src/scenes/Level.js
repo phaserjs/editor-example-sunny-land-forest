@@ -121,11 +121,6 @@ export default class Level extends Phaser.Scene {
 		// props
 		const props = this.add.layer();
 
-		// rock
-		const rock = this.add.image(256, 203.1999969482422, "atlas-props", "rock");
-		rock.setOrigin(0, 0);
-		props.add(rock);
-
 		// plant_4
 		const plant_4 = this.add.image(32, 192, "atlas-props", "plant");
 		plant_4.setOrigin(0, 0);
@@ -135,11 +130,6 @@ export default class Level extends Phaser.Scene {
 		const plant_5 = this.add.image(368, 192, "atlas-props", "plant");
 		plant_5.setOrigin(0, 0);
 		props.add(plant_5);
-
-		// rock_1
-		const rock_1 = this.add.image(848, 187.1999969482422, "atlas-props", "rock");
-		rock_1.setOrigin(0, 0);
-		props.add(rock_1);
 
 		// plant_6
 		const plant_6 = this.add.image(2400, 192, "atlas-props", "plant");
@@ -160,11 +150,6 @@ export default class Level extends Phaser.Scene {
 		const plant_9 = this.add.image(714, 192, "atlas-props", "plant");
 		plant_9.setOrigin(0, 0);
 		props.add(plant_9);
-
-		// rock_2
-		const rock_2 = this.add.image(1497, 72, "atlas-props", "rock");
-		rock_2.setOrigin(0, 0);
-		props.add(rock_2);
 
 		// tree
 		const tree = this.add.image(122.5, 114.69999694824219, "atlas-props", "tree");
@@ -429,6 +414,24 @@ export default class Level extends Phaser.Scene {
 		const player = new Player(this, 64, 160);
 		this.add.existing(player);
 
+		// rocks
+		const rocks = this.add.layer();
+
+		// rock
+		const rock = this.add.image(256, 203.1999969482422, "atlas-props", "rock");
+		rock.setOrigin(0, 0);
+		rocks.add(rock);
+
+		// rock_1
+		const rock_1 = this.add.image(848, 187.1999969482422, "atlas-props", "rock");
+		rock_1.setOrigin(0, 0);
+		rocks.add(rock_1);
+
+		// rock_2
+		const rock_2 = this.add.image(1497, 72, "atlas-props", "rock");
+		rock_2.setOrigin(0, 0);
+		rocks.add(rock_2);
+
 		// collisionsLayer
 		const collisionsLayer = levelMap.createLayer("collisionsLayer", ["collisions"], 0.5, 0.5);
 		collisionsLayer.visible = false;
@@ -484,7 +487,7 @@ export default class Level extends Phaser.Scene {
 		// scoreLabel
 		const scoreLabel = this.add.text(57, 12, "", {});
 		scoreLabel.text = "0";
-		scoreLabel.setStyle({ "align": "center", "fontFamily": "VT323", "fontSize": "8px" });
+		scoreLabel.setStyle({ align: "center", fontFamily: "VT323", fontSize: "8px" });
 		hudLayer.add(scoreLabel);
 
 		// playerVsFloor

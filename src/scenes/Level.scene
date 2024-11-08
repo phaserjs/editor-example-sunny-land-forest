@@ -62,19 +62,6 @@
             "list": [
                 {
                     "type": "Image",
-                    "id": "54aefe43-0919-409d-8e7c-868c163331d0",
-                    "label": "rock",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "rock"
-                    },
-                    "x": 256,
-                    "y": 203.1999969482422,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
                     "id": "ed51c4a4-a30e-40c3-a5ea-ebff6d9e4e92",
                     "label": "plant_4",
                     "texture": {
@@ -96,19 +83,6 @@
                     },
                     "x": 368,
                     "y": 192,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
-                    "id": "a445ad4c-d7e3-46b1-890e-e0cedc9df242",
-                    "label": "rock_1",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "rock"
-                    },
-                    "x": 848,
-                    "y": 187.1999969482422,
                     "originX": 0,
                     "originY": 0
                 },
@@ -161,19 +135,6 @@
                     },
                     "x": 714,
                     "y": 192,
-                    "originX": 0,
-                    "originY": 0
-                },
-                {
-                    "type": "Image",
-                    "id": "c272b042-3f54-4fbd-b642-7d98fb442e77",
-                    "label": "rock_2",
-                    "texture": {
-                        "key": "atlas-props",
-                        "frame": "rock"
-                    },
-                    "x": 1497,
-                    "y": 72,
                     "originX": 0,
                     "originY": 0
                 },
@@ -905,6 +866,52 @@
             "scope": "CLASS",
             "x": 64,
             "y": 160
+        },
+        {
+            "type": "Layer",
+            "id": "92843b29-c600-4cfb-a0fe-473d39d5ceab",
+            "label": "rocks",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "54aefe43-0919-409d-8e7c-868c163331d0",
+                    "label": "rock",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 256,
+                    "y": 203.1999969482422,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "a445ad4c-d7e3-46b1-890e-e0cedc9df242",
+                    "label": "rock_1",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 848,
+                    "y": 187.1999969482422,
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Image",
+                    "id": "c272b042-3f54-4fbd-b642-7d98fb442e77",
+                    "label": "rock_2",
+                    "texture": {
+                        "key": "atlas-props",
+                        "frame": "rock"
+                    },
+                    "x": 1497,
+                    "y": 72,
+                    "originX": 0,
+                    "originY": 0
+                }
+            ]
         },
         {
             "type": "EditableTilemapLayer",
