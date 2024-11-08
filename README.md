@@ -2,6 +2,8 @@
 
 This is a Phaser Editor example about how to use the new built-in, in-scene tilemap editor.
 
+[Learn more about the tilemap editor](https://docs.phaser.io/phaser-editor/scene-editor/game-objects/editable-tilemap-object).
+
 This project is based on the assets and code of the original [Sunny Land Forest](https://ansimuz.itch.io/sunnyland-forest) demo developed by [Ansimuz](https://ansimuz.itch.io).
 
 ## Configuration
