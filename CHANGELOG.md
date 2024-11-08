@@ -2,6 +2,6 @@
 
 - Moves the rocks to a front layer.
 
-## v1.0.0 - Nov 7, 2025
+## v1.0.0 - Nov 7, 2024
 
 - First release.
